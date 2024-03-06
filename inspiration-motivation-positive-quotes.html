@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Roboto--Cabin--Open Sans--Lato---Montserrat--Quicksand---PT Sans--Playfair--Display--Domine---->
+<head>
+  <meta charset="utf-8"/>
+  <base href="#">
+  <link rel="icon" type="image/x-icon" href="favicon.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="keywords" content="motivation, inspiration, positive mindset, success, goals, confidence">
+  <meta name="description" content="Discover a powerhouse of motivation quotes at our website, igniting inspiration and fueling success.Unleash your potential with uplifting words that propel you forward. Get ready to embark on a transformative journey – Learn, Achieve, and Conquer with our curated collection of motivational quotes. Elevate your mindset today!">
+  <title> Boost Your Day with Daily Motivation Quotes: Inspire, Energize, and Achieve! </title>
+  <style>
+  * {
+          margin:0px;
+          padding:0px;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+          font-family:roboto;
+          text-transform:capitalize;  
+		  user-select:none;
+		  }  
+   body.sidebar-open {  overflow: hidden; }
+	 html {   
+   	        background-color: ; 
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	     }
+   header {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+        #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
+		    background-color: #FFFFFF;
+            color: black;
+            width:100%;
+			padding:5px 10px;
+        }
+        .navbar-brand h1 {
+                 margin: 0;
+                 font-size: 24px;
+	             color:#5E2BFF;
+		 }
+        
+        .navbar-toggler {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size:28px;
+            padding:6px;
+	  }
+       
+        .sidebar {
+            height: calc(100vh - 40px);
+            width: 360px;
+            position: fixed;
+            top: 48px;
+            right: -100%;
+            background-color: #fff;
+            overflow-y: auto;
+            padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+            z-index: 998;
+        	padding:10px 0px 20px 0px;
+        }
+        
+        .sidebar.active {
+            right: 0;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            margin-bottom: 10px;
+        }
+        
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            margin:10px 10px;
+            text-decoration: none;
+            color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+            border-radius: 30px;
+            text-align: center; /* Center align the text */
+        }
+        .menu li #active {
+              background-color: #6b40f7;
+              color: white;
+		}
+        
+        .social-links {
+            margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            padding: 0;
+        }
+        
+        .social-links a {
+            margin: 0px 10px;
+            font-size: 20px;
+            text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
+            border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        @media (max-width:550px) {
+            .sidebar {
+                width: 100%;
+            }
+        }
+		
+		
+   #overlay {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+         z-index: 997; /* Ensure the overlay is below the sidebar */
+         display: none; /* Initially hidden */
+     }
+
+#overlay.active {
+  display: block; /* Display when sidebar is active */
+}
+		
+  .scroll-container {
+        margin-top:46px;
+        width: 100%;
+        overflow-x: auto;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;        
+		-webkit-box-pack: ;        
+		    -ms-flex-pack: ;        
+		        justify-content: ;
+        background:white;
+        padding:6px 0px;
+        position:relative ;
+        white-space: nowrap;
+		-ms-scroll-snap-type: x mandatory;
+		    scroll-snap-type: x mandatory;
+	 }
+ .scroll-container::-webkit-scrollber {
+         display:none;
+      }
+ .scroll-container > .scroll-item {
+         color:#181f1a;
+		 border:2px solid #ebe6fa;
+         text-align:center;
+         min-width: 100px;
+         text-decoration:none;
+         padding:5px 5px;
+         margin:0px 6px;
+         border-radius:14px;
+         overflow:scroll;
+		 scroll-snap-align:center;
+		}
+	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
+    .scroll-container > #active {
+           color: black;
+           background:#f0f0f0;
+		   border:none;
+        }
+  
+   .scroll-container::-webkit-scrollbar{  width:2px; }
+
+   .scroll-container::-webkit-scrollbar-track{  background: ;}
+
+   .scroll-container::-webkit-scrollbar-thumb{
+         /* background-color: #4acf36;
+          border-radius:0px;
+          border:1px none #FFFFFF; */
+           }
+     
+	 
+	  .head-logo > a {
+	       display: inline-block;
+           padding: 5px 10px;
+           text-decoration:none;   
+           font-size:18px;   
+           cursor:pointer;   
+           color:white;  
+           border-radius:50%;
+           margin: 0px 4px ;
+          -webkit-user-select:none;    
+          -moz-user-select:none;    
+          -ms-user-select:none;    
+           user-select:none;  
+          -webkit-transition-duration:0.3s;  
+              -o-transition-duration:0.3s;  
+                 transition-duration:0.3s;
+          -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
+         	text-transform:capitalize;			 
+       }
+  
+   .head-logo > a:nth-child(1) {
+         color:white;
+         background: #266DD3;
+       }
+   .head-logo > a:nth-child(2) {
+         color:white;
+         background: #F75C03 ;
+       }
+   .head-logo > a:nth-child(3) {
+         color:white;
+         background: #7BB2D9 ;
+       }
+   .head-logo > a:nth-child(4) {
+         color:white;
+         background: #31D843 ;
+       }
+   .head-logo > a:nth-child(5) {
+         color:white;
+         background: #F42B03 ;
+       }
+	   
+	 
+	main {
+       padding: 10px;
+   }
+
+ main > section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin: 10px 0px 20px 0px;  
+    color: #333;
+	
+}
+
+.quotes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.quote {
+    background-color: #f3f5f8;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 410px;
+}
+  
+	
+	
+    section {
+	     padding:10px;
+		 margin:10px auto;
+		 background: ;
+	  }	
+	section > ul > li {
+	       list-style-position: ;
+		   padding:6px 2px;		 
+	}
+	section > ul > li > a {
+	     text-decoration:none;
+		 color: #1c69ed;
+		 display:inline-block;
+	}
+	
+	
+   .quiz-container {
+         max-width: 600px;
+         margin: 0 auto;
+         background-color: #fff;
+         padding: 20px;
+         border-radius: 8px;
+     }
+
+     .quiz-container > h2 {
+          text-align: center;
+      }
+
+   #question {
+           font-size: 18px;
+           margin-bottom: 10px;
+      }
+
+    #options {
+          margin-bottom: 15px;
+      }
+
+   #options label {
+         display: block;
+         margin-bottom: 10px;
+       }
+
+#next-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #5e2bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+     .container {
+         max-width: 100%;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #fff;
+      }
+
+   .container > h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .recommended-pages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .page {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      display: block;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page img {
+      max-width: 100%;
+      aspect-ratio:1/0.70;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page-content {
+      padding: 15px 5px;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .page {
+        margin-bottom: 20px;
+      }
+    }
+	
+	
+	
+	footer {
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
+        }
+       footer > nav > a {
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		                 color: #181f1a;
+			         margin: 10px;
+                                 Font-size:1.50rem;  
+		     }
+	   
+	  
+      @media only screen and (min-width: 500px) {
+                                                        /* Styles for small screens here */
+               .recommended-pages {
+                           display: grid;
+                           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                           gap: 20px;
+                      }
+      }
+     @media only screen and (min-width: 768px) {
+                                                        /* Styles for medium screens here */
+                    html {
+			           margin:0 auto;
+			          width:90%;
+	        	  }  
+                				  
+                  					
+      }
+     @media only screen and (min-width:992px) {
+                                                        /* Styles for large screens here */
+			  html {
+	          margin:0 auto;
+			  max-width:65%;
+			  min-width:990px;
+		    }   
+			 .scroll-container { display:none; }
+			 .heading { margin-top:48px;}
+         .menu li a:hover {
+              background-color: #6b40f7;
+              color: white;
+            }	
+          .social-links a:hover {
+                 color: #fff;
+                 background-color: #5E2BFF;
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
+           }	
+         .scroll-container > .scroll-item:hover {
+                 color: black;
+                 background: #f0f0f0 ;
+		         border:none;
+		     }		
+        .navbar-toggler:hover {
+		       background: #ccc ;
+			   border-radius:50%;
+		    }		                                    
+         .head-logo > a:hover{ -webkit-transform:scale(1.20); -ms-transform:scale(1.20); transform:scale(1.20)}
+		 
+		  .page:hover {
+                 transform: translateY(-5px);
+            }
+      }
+
+
+          /*  @media(prefers-color-scheme:light) { 
+	         body {
+			     Background:#FFFFFF;
+				 color:#000000;
+			 }
+	  }
+     
+	  @media(prefers-color-scheme:dark) {
+	         body {
+			     Background:#000000;
+				 color:#FFFFFF;
+			 }
+	  } */
+ </style>
+</head>
+<body  oncontextmenu="return false">
+  
+        <header id="header">
+    <nav id="navbar">
+        <div class="navbar-brand">
+            <h1> Quotehubspot </h1>
+        </div>
+        <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+    <aside id="sidebar" class="sidebar">
+         <ul class="menu">
+            <li><a href="index.html" title="Go to Home"> Home </a></li>
+            <li><a href="about-us.html" title="Learn about us">About us</a></li>
+            <li><a href="blogs-blog-videos.html" title="Explore Blogs"> videos </a></li>
+            <li><a href="books-poem-sonnet-poetry.html" title="Read Poetry"> books </a></li>
+            <li><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self" title="shoping"> Life-Style</a></li>
+            <li><a href="health-tips-10-ways-to-stay-healthy.html" title="Get Health Advice"> Health</a></li>
+            <li><a href="contact-us.html" title="Contact us">Contact us</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/paytm_cash_hub" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@Wings_dna?si=jRA_QJeGv3yWkV-J" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </aside>
+</header>
+
+	 <!-- Overlay to cover content behind sidebar -->
+        <div id="overlay"></div>
+	
+         <nav class="scroll-container" title="scroll-ber">
+               <a class="scroll-item" id="active" href="inspiration-motivation-positive-quotes.html" target="_self"> Daily Quotes </a>     
+               <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
+               <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
+               <a class="scroll-item" href="blogs-blog-videos.html" target="_self"> videos </a>
+               <a class="scroll-item" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
+               <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
+               <a class="scroll-item" href="best-online-mobile-games.html" target="_self"> gaming </a>
+               <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
+               <a class="scroll-item" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
+               <a class="scroll-item" href="health-tips-10-ways-to-stay-healthy.html" target="_self"> health </a>
+	           <!-- Add more items as needed -->
+       </nav>  
+     
+	  
+	  <article>
+	         <div class="heading" id="heading"style="padding:5px 10px;">
+                   <h1> Empower Your Day: Inspirational Quotes for Daily Motivation </h1>
+                   <p> Updated on :<time> jan 16, 2024 </time> </p>
+            </div>
+                             <!-------heading logo------->
+                <div class="head-logo">
+                     <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="https://t.me/paytm_cash_hub" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+                     <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://youtube.com/@Wings_dna?si=jRA_QJeGv3yWkV-J" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>           
+               </div>			
+	  </article>
+	  
+	        <!-------main content in my webpage--------->
+	  <main>
+        <section id="success">
+            <h2>Success Quotes</h2>
+            <div id="success-quotes" class="quotes-container">
+	         <p class="quote"> Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill </p>
+                 <p class="quote"> Success is not how high you have climbed, but how you make a positive difference to the world. - Roy T. Bennett  </p>
+                 <p class="quote"> Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. - Albert Schweitzer  </p>
+                 <p class="quote"> The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt </p>
+                 <p class="quote"> Success is not just about making money. It's about making a difference. - Unknown </p>
+                 <p class="quote"> Success is not in what you have, but who you are. - Bo Bennett   </p>
+                 <p class="quote"> Success is not the destination, but the road that you're on. Being successful means that you're working hard and walking your walk every day. You can only live your dream by working hard towards it. - Will Smith  </p>
+                 <p class="quote"> Success is the sum of small efforts, repeated day in and day out. - Robert Collier  </p>
+                 <p class="quote"> The road to success and the road to failure are almost exactly the same. - Colin R. Davis </p>
+	         <p class="quote"> The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. - Steve Jobs </p>
+	   </div>
+        </section>
+        <section id="life">
+            <h2>Life Quotes</h2>
+            <div id="life-quotes" class="quotes-container">
+		 <p class="quote"> Life is what happens when you're busy making other plans. - John Lennon  </p>
+                 <p class="quote"> "In the end, it's not the years in your life that count. It's the life in your years. - Abraham Lincoln  </p>
+                 <p class="quote"> "Life is either a daring adventure or nothing at all. - Helen Keller  </p>
+                 <p class="quote"> Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein   </p>
+                 <p class="quote"> The purpose of our lives is to be happy. - Dalai Lama  </p>
+                 <p class="quote"> Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll  </p>
+                 <p class="quote"> The biggest adventure you can take is to live the life of your dreams. - Oprah Winfrey   </p>
+                 <p class="quote"> Life is short, and it is up to you to make it sweet. - Sarah Louise Delany  </p>
+                 <p class="quote"> Life is what we make it, always has been, always will be. - Grandma Moses  </p>
+                 <p class="quote"> Life is not a problem to be solved, but a reality to be experienced. - Soren Kierkegaard  </p>
+	   </div>
+        </section>
+        <section id="love">
+            <h2>Love Quotes</h2>
+            <div id="love-quotes" class="quotes-container">
+	         <p class="quote"> The best thing to hold onto in life is each other. - Audrey Hepburn   </p>
+                 <p class="quote"> Love is composed of a single soul inhabiting two bodies. - Aristotle   </p>
+                 <p class="quote"> Love isn't something you find. Love is something that finds you. - Loretta Young  </p>
+                 <p class="quote"> The best love is the kind that awakens the soul and makes us reach for more, that plants a fire in our hearts and brings peace to our minds. - Nicholas Sparks  </p>
+                 <p class="quote"> Being deeply loved by someone gives you strength, while loving someone deeply gives you courage. - Lao Tzu  </p>
+                 <p class="quote"> Love is when the other person's happiness is more important than your own. - H. Jackson Brown, Jr.  </p>
+                 <p class="quote"> The greatest happiness of life is the conviction that we are loved; loved for ourselves, or rather, loved in spite of ourselves. - Victor Hugo  </p>
+                 <p class="quote"> You know you're in love when you can't fall asleep because reality is finally better than your dreams. - Dr. Seuss   </p>
+                 <p class="quote"> The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart. - Helen Keller  </p>
+                 <p class="quote"> Love cures people—both the ones who give it and the ones who receive it. - Karl A. Menninger  </p>
+	   </div>
+        </section>
+    </main>
+	
+	
+	
+	  <section>
+	       <h2> Explore real-life success stories </h2>
+		   <ul>
+		       <li> <a href="#"> From Homeless to Entrepreneur: The Inspiring Journey of Chris Gardner </a> </li>
+		       <li> <a href="#"> Michael Jordan - From Cut High School Player to Basketball Legend  </a> </li>
+		       <li> <a href="#"> Elon Musk: The Visionary Entrepreneur  </a> </li>	
+		   </ul>
+	 </section>
+ 
+  
+		   <!------------------------------------------------------------------------
+		    -----------------------------QUIZ SECTION---------------------------------
+		    -------------------------------------------------------------------------->
+	 <div class="quiz-container">
+         <h2>Motivation Quiz</h2>
+         <div id="question"></div>
+         <div id="options"></div>
+         <button id="next-btn">Next Question</button>
+         <div id="result"></div>
+    </div>
+	
+	
+	
+	<section class="container">
+    <h1>Recommended Pages</h1>
+    <div class="recommended-pages">
+      <!-- Page 1 -->
+      <a class="page" href="books-poem-sonnet-poetry.html">
+        <img src="INDEX/poetry.webp" alt="Beauty of poetry">
+        <div class="page-content">
+          <h2>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </h2>
+        </div>
+      </a>
+      <!-- Page 2 -->
+      <a class="page" href="index.html">
+        <img src="INDEX/Lod7.webp" alt="lord Krishna quotes">
+        <div class="page-content">
+          <h2>  50 Best Shri Krishna's Quotes From Srimad Bhagavad Gita  </h2>
+        </div>
+      </a>
+      <!-- Page 3 -->
+      <a class="page" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html">
+        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat">
+        <div class="page-content">
+          <h2> Explore the Epics: Ramayana and Mahabharata Q&A </h2>
+        </div>
+      </a>
+      <!-- Page 4 -->
+      <a class="page" href="best-online-mobile-games.html">
+        <img src="INDEX/banner.webp" alt="video games">
+        <div class="page-content">
+          <h2>  Best mobile games in India: discover the best Games, tips, and reviews  </h2>
+        </div>
+      </a>
+      <!-- Page 5 -->
+      <a class="page" href="best-instant-free-paytm-cash-earning-apps.html">
+        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps">
+        <div class="page-content">
+          <h2>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </h2>
+        </div>
+      </a>
+      <!-- Page 6 -->
+      <a class="page" href="best-free-movie-download-websites.html">
+        <img src="INDEX/movie.webp" alt="movie-download-websites">
+        <div class="page-content">
+          <h2> Download movies: best movie download websites in 2024  </h2>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  
+  
+    <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+     <footer>
+        <p>  &copy copyright-2024  Quotehubspot. all rights reserved </p>
+        <div class="social-media">
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
+            <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/paytm_cash_hub" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@Wings_dna?si=jRA_QJeGv3yWkV-J" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <nav>
+            <a href="contact-us.html" target="_self">  Contact Us  </a>
+            <a href="about-us.html" target="_self">  About Us  </a>
+            <a href="about-us.html" target="_self">  Privacy & Policy  </a>
+            <a href="about-us.html" target="_self">  Terms & Conditions  </a>
+            <a href="about-us.html" target="_self">  Disclaimer  </a>
+            <a href="my-sitemap.html" target="_self">  Sitemap  </a>
+        </nav>
+    </footer>
+  
+	 
+    <script>
+           const sidebar = document.getElementById("sidebar");
+           const overlay = document.getElementById("overlay");
+           const toggleButton = document.getElementById("toggleButton");
+
+      function toggleNav() {
+          sidebar.classList.toggle("active");
+          toggleButton.innerHTML = sidebar.classList.contains("active") ? "&times;" : "&#9776;";
+
+    // Toggle visibility of overlay
+      overlay.classList.toggle("active");
+
+    // Add/remove class to body to prevent scrolling
+        document.body.classList.toggle("sidebar-open");
+  };
+
+
+
+
+         //change Navigation background
+     window.addEventListener('scroll', function() {
+       var scrollBox = document.getElementById('header');
+       if (window.scrollY > 0) {
+            scrollBox.style.boxShadow = '0px 0px 30px rgba(127, 137, 161, 0.25)';
+    } else {                             
+      scrollBox.style.boxShadow = 'none';
+    }
+  });
+
+
+
+       // Find the active scroll item
+              const activeItem = document.getElementById("active");
+              const scrollContainer = document.querySelector(".scroll-container");
+
+      // Calculate scroll position to center the active item
+              const containerWidth = scrollContainer.offsetWidth;
+              const scrollItemWidth = activeItem.offsetWidth;
+              const scrollItemLeft = activeItem.offsetLeft;
+              const scrollItemCenter = scrollItemLeft - (containerWidth - scrollItemWidth) / 2;
+
+     // Scroll the container to center the active item
+             scrollContainer.scrollLeft = scrollItemCenter;
+  
+  
+  
+      
+	      const questions = [
+  {
+    question: "What is the first step towards achieving your goals?",
+    options: ["Believe in yourself", "Make a plan", "Take action"],
+    answer: "Believe in yourself"
+  },
+  {
+    question: "What is the key to staying motivated?",
+    options: ["Setting realistic goals", "Staying positive", "Both"],
+    answer: "Both"
+  },
+  {
+    question: "What is the importance of failure in personal development?",
+    options: ["Failure is a setback", "Failure is a learning opportunity", "Failure doesn't matter"],
+    answer: "Failure is a learning opportunity"
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionElement = document.getElementById('question');
+const optionsElement = document.getElementById('options');
+const nextButton = document.getElementById('next-btn');
+const resultElement = document.getElementById('result');
+
+function showQuestion() {
+  const q = questions[currentQuestion];
+  questionElement.textContent = q.question;
+  optionsElement.innerHTML = '';
+
+  q.options.forEach(option => {
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'option';
+    input.value = option;
+    optionsElement.appendChild(input);
+
+    const label = document.createElement('label');
+    label.textContent = option;
+    optionsElement.appendChild(label);
+
+    optionsElement.appendChild(document.createElement('br'));
+  });
+}
+
+function checkAnswer() {
+  const userAnswer = document.querySelector('input[name="option"]:checked');
+  if (!userAnswer) return;
+
+  if (userAnswer.value === questions[currentQuestion].answer) {
+    score++;
+  }
+}
+
+function showResult() {
+  resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
+}
+
+nextButton.addEventListener('click', () => {
+  checkAnswer();
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+    nextButton.style.display = 'none';
+  }
+});
+
+showQuestion();
+
+
+   </script>
+</body>
+</html>

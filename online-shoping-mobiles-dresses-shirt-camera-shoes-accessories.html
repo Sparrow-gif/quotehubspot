@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en-US"> <!--Roboto--Cabin--Open Sans--Lato---Montserrat--Quicksand---PT Sans--Playfair--Display--Domine---->
+<head>
+  <meta charset="utf-8"/>
+  <base href="#">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="keywords" content="E-commerce, Best online prices, Virtual shopping, Shopping website, Buy online">
+  <meta name="description" content="Discover endless possibilities at our online store! From trendy fashion to must-have gadgets, find everything you need with just a click. Shop now for exclusive deals and unbeatable prices!">
+  <title> Discover Unbeatable Deals: Your One-Stop Shop for All Your Shopping Needs! </title>
+   <style>
+   
+    * {
+          margin:0px;
+          padding:0px;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+          font-family: roboto;
+          text-transform:capitalize;  
+        }  
+   body.sidebar-open {  overflow: hidden; }
+	 html {   
+	     scroll-behavior:smooth;
+         scroll-padding:3em;
+   	     background-color: ; 
+		 -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	     }
+   header {
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+        #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
+		    background-color: #FFFFFF;
+            color: black;
+            width:100%;
+			padding:5px 10px;
+        }
+        .navbar-brand h1 {
+                 margin: 0;
+                 font-size: 24px;
+	             color:#5E2BFF;	
+		 }
+        
+        .navbar-toggler {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size:28px;
+            padding:6px;
+	       }
+       
+        .sidebar {
+            height: calc(100vh - 40px);
+            width: 360px;
+            position: fixed;
+            top: 48px;
+            right: -100%;
+            background-color: #fff;
+            overflow-y: auto;
+            padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+            z-index: 998;
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding:10px 0px 20px 0px;
+        }
+        
+        .sidebar.active {
+            right: 0;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            margin-bottom: 10px;
+        }
+        
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            margin:10px 10px;
+            text-decoration: none;
+            color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+            border-radius: 30px;
+            text-align: center; /* Center align the text */
+        }
+       
+        .social-links {
+            margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            padding: 0;
+        }
+        
+        .social-links a {
+            margin: 0px 10px;
+            font-size: 20px;
+            text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
+            border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        @media (max-width:550px) {
+            .sidebar {
+                width: 100%;
+            }
+        }
+		
+		
+   #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+  z-index: 997; /* Ensure the overlay is below the sidebar */
+  display: none; /* Initially hidden */
+}
+
+#overlay.active {
+  display: block; /* Display when sidebar is active */
+}
+	
+	
+	.banner {
+         margin-top:70px;
+         display:-webkit-box;
+         display:-ms-flexbox;
+         display:flex;
+         -webkit-box-pack: ;
+             -ms-flex-pack: ;
+                 justify-content: ;
+         -webkit-box-align:center ;
+             -ms-flex-align:center ;
+                 align-items:center ;
+         -webkit-box-orient:vertical;
+         -webkit-box-direction:normal;
+             -ms-flex-direction:column;
+                 flex-direction:column;
+         gap:20px;        
+         height:auto;
+       }
+      .banner > div { 
+          display:-webkit-box; 
+          display:-ms-flexbox; 
+          display:flex;
+          -webkit-box-pack:center;
+              -ms-flex-pack:center;
+                  justify-content:center;
+          -webkit-box-align:center;
+              -ms-flex-align:center;
+                  align-items:center;
+          -webkit-box-orient:vertical;
+          -webkit-box-direction:normal;
+              -ms-flex-direction:column;
+                  flex-direction:column;
+       }
+     .banner > div > img {
+          width:100%;
+          height:100%;
+          -o-object-fit:fill;
+             object-fit:fill;
+          background-position:center;
+          background-size:cover;
+		  cursor: not-allowed;
+		  -webkit-user-select:none;
+		     -moz-user-select:none;
+		      -ms-user-select:none;
+		          user-select:none;
+       }
+     .banner  > div > a {
+         background:#5e2bff;
+         padding:8px 30px;
+         border-radius:30px;
+         font-size:20px;
+         color:#fff;
+         text-decoration:none;
+         margin-top:40px;
+         }
+		
+		
+	#category {
+		   border:2px solid #5E2BFF;
+		   padding:20px;
+		   margin:10px 20px;
+		   border-radius:6px;
+		   display:-webkit-box;
+		   display:-ms-flexbox;
+		   display:flex;
+		   -ms-flex-wrap:wrap;
+		       flex-wrap:wrap;
+		   -ms-flex-pack:distribute;
+		       justify-content:space-around;
+		   -webkit-box-align:center;
+		       -ms-flex-align:center;
+		           align-items:center;
+		   gap:20px;
+		}
+		#category > a { text-decoration:none; }
+    #category > a > div { 
+	       border:2px solid #f0f0f0;
+		   width:190px;
+		   height:210px;
+		   border-radius:10px;
+		   display:-webkit-box;
+		   display:-ms-flexbox;
+		   display:flex;
+		   -ms-flex-wrap:wrap;
+		       flex-wrap:wrap;
+		   -webkit-box-pack:Center;
+		       -ms-flex-pack:Center;
+		           justify-content:Center;
+		   -webkit-box-align:center;
+		       -ms-flex-align:center;
+		           align-items:center;
+		   gap:20px;
+		   -webkit-box-orient:vertical;
+		   -webkit-box-direction:normal;
+		       -ms-flex-direction:column;
+		           flex-direction:column;
+		   -webkit-transition-duration:0.3s;
+		        -o-transition-duration:0.3s;
+		           transition-duration:0.3s;
+	   }
+    #category > a > div > i {  
+	       font-size:36px;
+	  }
+	 #category > a > div > p{  
+	       font-size:24px;
+	  }
+	  
+	 
+   main > figure {
+           	 display:-webkit-box;
+           	 display:-ms-flexbox;
+           	 display:flex;
+		     -ms-flex-wrap:wrap;
+		         flex-wrap:wrap;
+		     -webkit-box-pack:space-evenly;
+		         -ms-flex-pack:space-evenly;
+		             justify-content:space-evenly;
+		     -webkit-box-align:center;
+		         -ms-flex-align:center;
+		             align-items:center;
+			 gap:20px;
+         }	 
+	main > figure > div {
+           border:2px solid #f0f0f0;
+		   width:310px;
+		   height:320px;
+		   border-radius:10px;
+		   padding:10px 10px;
+		   overflow:hidden;
+		   -webkit-transition-duration:0.3s;
+		        -o-transition-duration:0.3s;
+		           transition-duration:0.3s;
+       }	  
+      main > figure > div > a > img {
+	       width:300px;
+		   height:300px;	  
+	 }
+	  
+	  
+	  
+	    .gallery {
+		     overflow-x:auto;
+		     overflow-y:hidden;
+		     background:;
+		     padding:10px;
+		     white-space:nowrap;
+		     -ms-scroll-snap-type: x mandatory;
+		         scroll-snap-type: x mandatory;
+			 cursor: w-resize;
+         }
+  
+    .gallery-item {
+	        display:inline-block;
+            position: relative;
+            width: 165px; /* Fixed width for each item */
+            height: 200px; /* Fixed height for each item */
+            overflow: hidden;
+            border:2px solid #f0f0f0;
+	        padding:6px;
+			margin:10px;
+			scroll-snap-align:center;
+         }
+  
+   .gallery-item img {
+           width: 100%;
+           height: 100%;
+           display: block;
+           -webkit-transition: -webkit-transform 0.3s ease-in-out;
+           transition: -webkit-transform 0.3s ease-in-out;
+           -o-transition: transform 0.3s ease-in-out;
+           transition: transform 0.3s ease-in-out;
+           transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+           -o-object-fit: fill;
+              object-fit: fill;
+         }
+  
+  .price-button {
+         position: absolute;
+         bottom: 5px;
+         right: 10px;
+         background-color: #ff5a5f;
+         color: white;
+         padding: 5px 10px;
+         text-decoration: none;
+         border: none;
+		 border-radius: 5px;
+        font-size: 12px;
+	  }
+	  
+	   footer {
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
+        }
+       footer > nav > a {
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color: #181f1a;
+			         margin: 10px;
+                     Font-size:1.50rem;  
+		 }
+	  
+	  
+ @media only screen and (min-width:767px) { 		
+		 .banner {
+              gap:10px;
+              display:-ms-grid;
+              display:grid;
+              grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr)) ;
+          }
+	     main > figure > div {
+                 width:360px;
+	         height:380px;
+		 }
+	  main > figure > div > a > img {
+	       width:350px;
+	       height:370px;	  
+	    }
+  }			
+			
+			
+    @media only screen and (min-width:992px) { 
+	       html {
+	          margin:0 auto;
+			  max-width:65%;
+			  min-width:990px;
+		    }  
+   			
+         .menu li a:hover {
+              background-color: #6b40f7;
+              color: white;
+            }	
+          .social-links a:hover {
+                 color: #fff;
+                 background-color: #5E2BFF;
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
+           }	
+         .scroll-container > .scroll-item:hover {
+                 color: black;
+                 background: #f0f0f0 ;
+		         border:none;
+		     }		
+        .navbar-toggler:hover {
+		       background: #ccc ;
+			   border-radius:50%;
+		    }		
+		#category > a > div:hover  {
+			      -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
+		main > figure > div:hover {
+		         -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				 -webkit-transform:scale(1.02);
+				     -ms-transform:scale(1.02);
+				         transform:scale(1.02);
+	    	}
+	 
+	    main > figure > div {
+                 width:260px;
+	            height:280px;
+		 }
+	  main > figure > div > a > img {
+	       width:250px;
+	       height:270px;	  
+	    }
+			
+	}
+		 </style>
+  </head>
+  <body ncontextmenu="return false">
+        <header id="header">
+    <nav id="navbar">
+        <div class="navbar-brand">
+            <h1> Quotehubspot </h1>
+        </div>
+        <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+    <aside id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html" title="Go to Home"> Home </a></li>
+            <li><a href="about-us.html" title="Learn about us">About us</a></li>
+            <li><a href="blogs-blog-videos.html" title="Explore Blogs"> videos </a></li>
+            <li><a href="books-poem-sonnet-poetry.html" title="Read Poetry"> books </a></li>
+            <li><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self" title="shoping"> Life-Style</a></li>
+            <li><a href="health-tips-10-ways-to-stay-healthy.html" title="Get Health Advice"> Health</a></li>
+            <li><a href="contact-us.html" title="Contact us">Contact us</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/paytm_cash_hub" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </aside>
+</header>
+    
+	   <!-- Overlay to cover content behind sidebar -->
+  <div id="overlay"></div>
+	
+	
+	 <section class="banner">
+            <div style="height:220px;">
+                <h1> discount online shop </h1>
+                <p style="padding:0px 20px;text-align:center;"> Welcome to our online shop! Discover a wide selection of products, from fashion and electronics to home goods, all just a click away. Happy shopping! </p>
+                <a href="#clothing"> shop now <i class="fa-solid fa-cart-shopping"></i> </a>
+           </div>
+            <div style="height:auto;">
+               <img src="AMAZON/Shop.webp" alt="Banner">
+           </div>
+      </section>
+    
+	       <h1 style="text-align:Center;color:#5e2bff; font-weight:bold; padding:20px;">  CATEGORY  </h1>
+	 <article id="category">
+	       <a href="#clothing">
+		        <div> 
+		            <i class="fa-solid fa-shirt" style="color: #5e2bff;"></i> 
+					<p>  clothing  </p>
+			   </div> 
+		  </a>
+		   <a href="#watches">
+		        <div> 
+		            <i class="material-icons" style="font-size:45px; color:#5e2bff;">watch</i> 
+					<p>  watches  </p>
+			   </div> 
+		  </a>
+		   <a href="#shoes">
+		        <div> 
+		            <i class="fa-solid fa-shoe-prints" style="color: #5e2bff;"></i>
+					<p>  Shoes  </p>
+			   </div> 
+		  </a>
+		   <a href="#accessories">
+		        <div> 
+		            <i class="fa fa-diamond" style="font-size:45px; color: #5e2bff;"></i>
+					<p>  Accessories  </p>
+			   </div> 
+		  </a>
+	 </article>
+	 
+	 
+	    <!-----------------------------------
+	    ----------CLOTHINGS SECTION----------
+	    -------------------------------------->  
+	  <main>
+	       <h1 id="clothing" style="padding:10px 10px; color:#5E2BFF;">  clothing  </h1>
+		   <figure>
+                 <div> <!----------PRODUCTS 1-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 2-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 3-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 4-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+		  </figure>
+	 </main>
+	  
+	 <!-------------NEW RELESES MOVIES----------------------------->
+      <section class="gallery" id="gallery">
+                <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 01--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 02--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 03--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 04--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 05--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 06--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 07--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 08--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 09--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 010--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+	   </section>
+	   
+	   
+	   
+	             <!-----------------------------------
+	               ----------watches SECTION----------
+	               -------------------------------------->  
+	  <main>
+	       <h1 id="watches" style="padding:10px 10px;color:#5E2BFF;">  watches  </h1>
+		   <figure>
+                 <div> <!----------PRODUCTS 1-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 2-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 3-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 4-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+		  </figure>
+	 </main>
+	  
+	 <!-------------NEW RELESES MOVIES----------------------------->
+      <section class="gallery" id="gallery">
+                <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 01--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 02--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 03--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 04--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 05--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 06--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 07--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 08--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 09--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 010--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+	   </section>
+	   
+	   
+	   
+	          <!-----------------------------------
+	            ----------SHOES SECTION----------
+	            -------------------------------------->  
+	  <main>
+	       <h1 id="shoes" style="padding:10px 10px;color:#5E2BFF;">  shoes  </h1>
+		   <figure>
+                 <div> <!----------PRODUCTS 1-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 2-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 3-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 4-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product"> </a>
+				 </div>
+		  </figure>
+	 </main>
+	  
+	 <!-------------NEW RELESES MOVIES----------------------------->
+      <section class="gallery" id="gallery">
+                <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 01--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 02--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 03--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 04--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 05--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 06--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 07--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 08--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 09--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 010--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+	   </section>
+	   
+	   
+	                 <!-----------------------------------
+	                   ----------ACCESSORIES SECTION----------
+	                   -------------------------------------->  
+	  <main>
+	       <h1 id="accessories" style="padding:10px 10px;color:#5E2BFF;">  accessories  </h1>
+		   <figure>
+                 <div> <!----------PRODUCTS 1-------------------->
+                     <a href="#"> <img src="AMAZON/.webp" alt="product" loading="auto"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 2-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product" loading="auto"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 3-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product" loading="auto"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 4-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp" alt="product" loading="auto"> </a>
+				 </div>
+		  </figure>
+	 </main>
+	  
+	 <!-------------NEW RELESES MOVIES----------------------------->
+      <section class="gallery" id="gallery">
+                <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 01--------->
+                      <a href="https://amzn.to/49R9hBL" target="_blank">
+                          <img src="AMAZON/Jew1.webp" alt="jewlary" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/49R9hBL" class="price-button"> $ 390 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 02--------->
+                     <a href="https://amzn.to/3uM8sLR" target="_blank">
+                        <img src="AMAZON/Jew2.webp" alt="jewlary" loading="auto">
+                    </a>
+                     <a href="https://amzn.to/3uM8sLR" class="price-button"> $ 249</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 03--------->
+                      <a href="https://amzn.to/3IipyE0" target="_blank">
+                          <img src="AMAZON/Jew3.webp" alt="jewlary" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3IipyE0" class="price-button"> $ 279 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 04--------->
+                     <a href="https://amzn.to/3IgQvbq" target="_blank">
+                        <img src="AMAZON/Jew4.webp" alt="jewlary" loading="auto">
+                    </a>
+                     <a href="https://amzn.to/3IgQvbq" class="price-button"> $ 319 </a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 05--------->
+                      <a href="https://amzn.to/3UXo1uK" target="_blank">
+                          <img src="AMAZON/Jew5.webp" alt="jewlary" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UXo1uK" class="price-button"> $ 299 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 06--------->
+                     <a href="https://amzn.to/3OZBvCC" target="_blank">
+                        <img src="AMAZON/Jew6.webp" alt="jewlary" loading="auto">
+                    </a>
+                     <a href="https://amzn.to/3OZBvCC" class="price-button"> $559 </a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 07--------->
+                      <a href="https://amzn.to/3wInQJu" target="_blank">
+                          <img src="AMAZON/Jew7.webp" alt="jewlary" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3wInQJu" class="price-button"> $ 319 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 08--------->
+                     <a href="https://amzn.to/48t6m1a" target="_blank">
+                        <img src="AMAZON/Jew8.webp" alt="jewlary" loading="auto">
+                    </a>
+                     <a href="https://amzn.to/48t6m1a" class="price-button"> $689 </a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 09--------->
+                      <a href="https://amzn.to/3SYs1bE" target="_blank">
+                          <img src="AMAZON/Jew9.webp" alt="jewlary" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3SYs1bE" class="price-button"> $537 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 010--------->
+                     <a href="https://amzn.to/49R9o09" target="_blank">
+                        <img src="AMAZON/Jew10.webp" alt="jewlary" loading="auto">
+                    </a>
+                     <a href="https://amzn.to/49R9o09" class="price-button"> $269 </a>
+               </article>
+	   </section>
+	   
+	  <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+     <footer>
+        <p>  &copy copyright-2024  quotehubspot. all rights reserved </p>
+        <div class="social-media">
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
+            <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/paytm_cash_hub" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@Wings_dna?si=jRA_QJeGv3yWkV-J" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <nav>
+            <a href="contact-us.html" target="_self">  Contact Us  </a>
+            <a href="about-us.html" target="_self">  About Us  </a>
+            <a href="about-us.html" target="_self">  Privacy & Policy  </a>
+            <a href="about-us.html" target="_self">  Terms & Conditions  </a>
+            <a href="about-us.html" target="_self">  Disclaimer  </a>
+            <a href="my-sitemap.html" target="_self">  Sitemap  </a>
+        </nav>
+    </footer>
+	
+<script>
+
+           const sidebar = document.getElementById("sidebar");
+           const overlay = document.getElementById("overlay");
+           const toggleButton = document.getElementById("toggleButton");
+
+      function toggleNav() {
+          sidebar.classList.toggle("active");
+          toggleButton.innerHTML = sidebar.classList.contains("active") ? "&times;" : "&#9776;";
+
+    // Toggle visibility of overlay
+      overlay.classList.toggle("active");
+
+    // Add/remove class to body to prevent scrolling
+        document.body.classList.toggle("sidebar-open");
+  };
+
+
+
+
+         //change Navigation background
+     window.addEventListener('scroll', function() {
+       var scrollBox = document.getElementById('header');
+       if (window.scrollY > 0) {
+            scrollBox.style.boxShadow = '0px 0px 30px rgba(127, 137, 161, 0.25)';
+    } else {                             
+      scrollBox.style.boxShadow = 'none';
+    }
+  });
+
+  
+   </script>
+   </body>
+</html>
