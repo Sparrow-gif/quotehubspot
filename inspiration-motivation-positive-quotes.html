@@ -259,14 +259,30 @@
          color:white;
          background: #F42B03 ;
        }
-	   
+	 
+
+ .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-gap: 20px;
+      padding: 20px;
+    }
+
+    .category {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+	
 	 
 	main {
        padding: 10px;
    }
 
  main > section {
-    margin-bottom: 30px;
+    
 }
 
 h2 {
@@ -572,12 +588,33 @@ h2 {
                </div>			
 	  </article>
 	  
+	    
+		<h1 style="display:inline-block;margin:20px 10px 0px;"> quote categories </h1>
+	  <section class="grid-container">
+           <article class="category">
+               <h2>Motivation</h2>
+               <p>Stay inspired and motivated!</p>
+          </article>
+           <article class="category">
+               <h2> Success</h2>
+               <p>Achieve your goals and dreams.</p>
+          </article>
+           <article class="category">
+                <h2> Happiness </h2>
+                <p>Find joy and contentment in life.</p>
+          </article>
+           <article class="category">
+                <h2>Love</h2>
+                <p>Celebrate the power of love.</p>
+          </article>
+     </section>
+	  
 	        <!-------main content in my webpage--------->
 	  <main>
         <section id="success">
             <h2>Success Quotes</h2>
             <div id="success-quotes" class="quotes-container">
-	         <p class="quote"> Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill </p>
+	             <p class="quote"> Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill </p>
                  <p class="quote"> Success is not how high you have climbed, but how you make a positive difference to the world. - Roy T. Bennett  </p>
                  <p class="quote"> Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. - Albert Schweitzer  </p>
                  <p class="quote"> The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt </p>
@@ -592,7 +629,7 @@ h2 {
         <section id="life">
             <h2>Life Quotes</h2>
             <div id="life-quotes" class="quotes-container">
-		 <p class="quote"> Life is what happens when you're busy making other plans. - John Lennon  </p>
+		         <p class="quote"> Life is what happens when you're busy making other plans. - John Lennon  </p>
                  <p class="quote"> "In the end, it's not the years in your life that count. It's the life in your years. - Abraham Lincoln  </p>
                  <p class="quote"> "Life is either a daring adventure or nothing at all. - Helen Keller  </p>
                  <p class="quote"> Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein   </p>
@@ -607,7 +644,7 @@ h2 {
         <section id="love">
             <h2>Love Quotes</h2>
             <div id="love-quotes" class="quotes-container">
-	         <p class="quote"> The best thing to hold onto in life is each other. - Audrey Hepburn   </p>
+	             <p class="quote"> The best thing to hold onto in life is each other. - Audrey Hepburn   </p>
                  <p class="quote"> Love is composed of a single soul inhabiting two bodies. - Aristotle   </p>
                  <p class="quote"> Love isn't something you find. Love is something that finds you. - Loretta Young  </p>
                  <p class="quote"> The best love is the kind that awakens the soul and makes us reach for more, that plants a fire in our hearts and brings peace to our minds. - Nicholas Sparks  </p>
@@ -617,7 +654,7 @@ h2 {
                  <p class="quote"> You know you're in love when you can't fall asleep because reality is finally better than your dreams. - Dr. Seuss   </p>
                  <p class="quote"> The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart. - Helen Keller  </p>
                  <p class="quote"> Love cures people—both the ones who give it and the ones who receive it. - Karl A. Menninger  </p>
-	   </div>
+	       </div>
         </section>
     </main>
 	
