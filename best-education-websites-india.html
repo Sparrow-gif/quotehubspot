@@ -410,67 +410,18 @@
          background-position:center;
          }
     
-    #askqtn {           
-          margin:0 auto ;
-          padding:14px;
-          -webkit-user-select:none;
-             -moz-user-select:none;
-              -ms-user-select:none;
-                  user-select:none;
-          width:100% ;
-          height:auto;
-          background: ;
-       }
-   #askqtn > .accordion {
-         font-size:14px;
-         text-transform:capitalize;
-         background-color:#f0f0f0;
-         margin:10px auto;
-         color: #444;
-         cursor: pointer;
-         padding: 18px;
-         width: 100%;
-         border:none;
-         border-radius:8px;
-         text-align: left;
-         outline: none;
-         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-         -webkit-transition: 0.4s;
-         -o-transition: 0.4s;
-         transition: 0.4s;
-     }
-
-     .accordion:after {
-            content: '\02C7';
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-		 }
-    .active:after {
-           content: "\02C6";
-         }
-
-      .panel {
-           padding: 0 10px;
-           background-color: ;
-           max-height: 0;
-           overflow: hidden;
-	       font-size:14px;
-           -webkit-transition: max-height 0.2s ease-out;
-           -o-transition: max-height 0.2s ease-out;
-           transition: max-height 0.2s ease-out;
-          }    
-     .panel > p {
-            padding: 8px 10px;
-            color: ;
-            font-family: ;
-            font-size: ;
-            min-height: ;
-            max-height:260px;
-            overflow:scroll;
-               }
-     .panel > p::-webkit-scrollbar{ display:none; }
+     #askqtn {
+	        margin:0px auto;
+			width:100%;
+			padding:5%;
+	      }
+     #askqtn > article > h2 {
+          font-size:18px;
+		  padding:5px 0px 10px 0px;
+	 } 
+     #askqtn > article > p {
+          font-size:14px;
+	 } 
 
 
      footer {
@@ -911,45 +862,45 @@
        <section id="askqtn">
              <h1 style="color: #291769; font-family:roboto;"> FAQ </h1>
              <!-------accordion 01-------->
-             <button class="accordion"> What are the top 10 education websites? </button>
-             <div class="panel">
-                 <p>The top 10 education websites vary based on factors such as content quality, user interface, and target 
-		    audience. However, some popular choices often include Khan Academy, Coursera.
-                </p>
-            </div>
+             <Article> 
+			        <h2> Q1. What are the top 10 education websites? </h2>
+                    <p> <strong> A1. </strong> top 10 education websites vary based on factors such as content quality, user interface, and target 
+		                audience. However, some popular choices often include Khan Academy, Coursera.
+                   </p>
+            </Article>
                          <!-------accordion 02-------->
-            <button class="accordion"> Are these education websites free to use? </button>
-            <div class="panel">
-                 <p>Most of the top education websites offer both free and paid options. Many provide free access to basic courses 
-			 and materials, while premium features and certifications may require payment. Some platforms operate
-			 on a subscription model, offering unlimited access to their entire catalog for a monthly fee.
-		 </p>
-           </div>
+            <Article> 
+			      <h2> Q2. Are these education websites free to use? </h2>
+                  <p> <strong> A2. </strong> Most of the top education websites offer both free and paid options. Many provide free access to basic courses 
+			          and materials, while premium features and certifications may require payment. Some platforms operate
+			          on a subscription model, offering unlimited access to their entire catalog for a monthly fee.
+		         </p>
+           </Article>
                            <!-------accordion 03-------->
-            <button class="accordion"> Can I earn certifications or degrees from these websites? </button>
-            <div class="panel">
-                 <p> Yes, several education websites offer certifications or even full degrees upon completion of 
-		     their programs. Platforms like Coursera, edX, and Udemy offer accredited courses with certificates,
-		     while others like LinkedIn Learning provide skill-based certifications recognized by employers.
-		 </p>
-           </div>
+            <Article> 
+			     <h2> Q3. Can I earn certifications or degrees from these websites? </h2>
+                 <p> <strong> A3. </strong> Yes, several education websites offer certifications or even full degrees upon completion of 
+		             their programs. Platforms like Coursera, edX, and Udemy offer accredited courses with certificates,
+		             while others like LinkedIn Learning provide skill-based certifications recognized by employers.
+		        </p>
+           </Article>
                               <!-------accordion 04-------->
-	    <button class="accordion"> Can I access these education websites on mobile devices? </button>
-            <div class="panel">
-                 <p> Yes, most of these education websites offer mobile apps or mobile-friendly websites, allowing users
-			 to access their content on smartphones and tablets. This enables learners to study on the go and
-			 make the most of their time.
-		 </p>
-           </div>
+	       <Article> 
+		         <h2> Q4. Can I access these education websites on mobile devices? </h2>
+                 <p> <strong> A4. </strong> Yes, most of these education websites offer mobile apps or mobile-friendly websites, allowing users
+			         to access their content on smartphones and tablets. This enables learners to study on the go and
+			         make the most of their time.
+		        </p>
+           </Article>
                              <!-------accordion 05-------->
-	   <button class="accordion"> How do I get started with these education websites? </button>
-            <div class="panel">
-                 <p> To get started, simply visit the website of your chosen platform and create an account. From there,
-			 you can explore the available courses, enroll in those that interest you, and begin your learning 
-			 journey. Many platforms offer introductory courses or free trials to help you get acquainted with 
-			 their offerings before committing to a paid subscription.
-		 </p>
-           </div>
+	        <Article>
+         		<h2> Q5. How do I get started with these education websites? </h2>
+                <p> <strong> A5. </strong> To get started, simply visit the website of your chosen platform and create an account. From there,
+			         you can explore the available courses, enroll in those that interest you, and begin your learning 
+			         journey. Many platforms offer introductory courses or free trials to help you get acquainted with 
+			         their offerings before committing to a paid subscription.
+		       </p>
+           </Article>
     </section>
 
 
@@ -1095,21 +1046,7 @@
   document.documentElement.scrollTop = 0;  
  });
 
-     var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-};
-            
+    
    </script>
    </body>
 </html>
