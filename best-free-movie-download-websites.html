@@ -80,9 +80,7 @@
             -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
-            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-			padding:10px 0px 20px 0px;
+            padding:10px 0px 20px 0px;
         }
         
         .sidebar.active {
@@ -341,7 +339,7 @@
            font-size:1rem;
            padding:10px;
           }
-     .page {
+     #container > figure > .page {
            padding:10px;
            border:none;
            background: #5e2bff;
@@ -382,66 +380,68 @@
          }
 
 
-    .recommended-articles {
-             width: 100%;
-             margin: 0 auto;
-             padding:10px  ;   
-             -webkit-box-sizing:border-box;   
-                     box-sizing:border-box;
-			 Display:flex;
-			 -ms-flex-wrap:wrap;
-			     flex-wrap:wrap;
-	         gap:20px;
-	        -webkit-box-pack:space-evenly ;
-	            -ms-flex-pack:space-evenly ;
-	                justify-content:space-evenly ;			
-        }
+   .reqcontainer {
+         max-width: 100%;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #fff;
+      }
 
-   .article {
-         margin:0 auto;
-         width: 160px;
-         border: 0px solid #ccc;
-         padding: 0px ;
-         margin-bottom: 10px;
-         display: -webkit-box;
-         display: -ms-flexbox;
-         display: flex;
-         -webkit-box-orient: vertical;
-         -webkit-box-direction: normal;
-             -ms-flex-direction: column;
-                 flex-direction: column;
-         -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-                 box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-		 -webkit-transition-duration:0.3s;
-		      -o-transition-duration:0.3s;
-		         transition-duration:0.3s;
-				 overflow:hidden;
-				 border-radius:6px;
-			 }
-    
-   .article img {
-        max-width: 100%;
-        aspect-ratio:1/0.70;  
-        -o-object-fit: fill;  
-        object-fit: fill;
-	    background-position:center;
-     }
+   .reqcontainer > h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-     .article p {
-           margin-top:10px;
-           -webkit-transition-duration:0.3s;
-                -o-transition-duration:0.3s;
-                   transition-duration:0.3s;
-	    font-family: ;
-	    text-align:center;
-	     font-size:15px;
-           }
+    .recommended-pages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
 
-      .article p a {
-            text-decoration: none;
-            color:#6e14b3;
-            text-align:center;
-         }
+   .recommended-pages > .page {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      display: block;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page img {
+      max-width: 100%;
+      aspect-ratio:1/0.70;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page-content {
+      padding: 15px 5px;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .page {
+        margin-bottom: 20px;
+      }
+    }
 
 
 
@@ -577,9 +577,13 @@
    
   
   
-      @media only screen and (min-width:600px) { 
-	         .article {  margin:0 auto;   width: 220px ; }
-	  }
+ @media only screen and (min-width: 500px) {
+                                                        /* Styles for small screens here */
+               .recommended-pages {
+                           display: grid;
+                           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                           gap: 20px;
+                      }
 	  
     @media only screen and (min-width: 768px) {
 	         html {
@@ -600,6 +604,7 @@
 			  min-width:990px;
 		    }   
 			 .scroll-container { display:none; }
+			 main { margin-top:50px;}
 		 .head-logo > a:hover{ 
 		            -webkit-transform:scale(1.20);
 					-ms-transform:scale(1.20);
@@ -641,7 +646,7 @@
     }
    </style>
   </head>
-  <body ncontextmenu="return false">
+  <body oncontextmenu="return false">
        <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
@@ -651,13 +656,17 @@
     </nav>
     <aside id="sidebar" class="sidebar">
          <ul class="menu">
-            <li><a href="index.html" title="Go to Home"> Home </a></li>
-            <li><a href="about-us.html" title="Learn about us">About us</a></li>
-            <li><a href="blogs-blog-videos.html" title="Explore Blogs"> videos </a></li>
-            <li><a href="books-poem-sonnet-poetry.html" title="Read Poetry"> books </a></li>
-            <li><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self" title="shoping"> Life-Style</a></li>
-            <li><a href="health-tips-10-ways-to-stay-healthy.html" title="Get Health Advice"> Health</a></li>
-            <li><a href="contact-us.html" title="Contact us">Contact us</a></li>
+             <li><a href="index.html" title="Go to Home"> Home </a></li>
+             <li><a href="about-us.html" title="Learn about us">  About us  </a></li>
+			 <li><a href="inspiration-motivation-positive-quotes.html" title="Explore quotes"> quotes </a></li>			
+             <li><a href="blogs-blog-videos.html" title="Explore Blogs"> videos </a></li>
+             <li><a href="books-poem-sonnet-poetry.html" title="Read Poetry"> books </a></li>
+			 <li><a href="best-education-websites-india.html" title="Explore study tools"> study </a></li>
+			 <li><a href="best-online-mobile-games.html" title="gaming world"> gamimg </a></li>
+             <li><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self" title="shoping"> Life-Style</a></li>
+             <li><a href="best-free-movie-download-websites.html" title="bollywood movies"> cinema </a></li>
+		     <li><a href="health-tips-10-ways-to-stay-healthy.html" title="Get Health Advice"> Health</a></li>
+             <li><a href="contact-us.html" title="Contact us">Contact us</a></li>
         </ul>
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -985,56 +994,52 @@
 		</section>
 
    <!-----Recomended Article Section-------->
-	     <h1 Style="padding:10px; Font-family: ;color:#211b63;"> related Articles </h1>
-         <section class="recommended-articles">
- 
-     <!---Artical2----->
-          <div class="article">
-             <img src="INDEX/webnews.webp" alt="daily news update" loading="lazy">
-             <p><a href="latest-breaking-viral-news-update.html"> Stay Updated with the Latest Headlines on- web news </a></p>
-         </div>
-
-     <!---Artical4----->
-          <div class="article">
-             <img src="INDEX/CYBER1.webp" alt="cyber Security" loading="lazy">
-             <p><a href="cyber-security-what-is-cybersecurity.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a></p>
-         </div>
-
-     <!---Artical5-----> 
-          <div class="article">
-             <img src="INDEX/poetry.webp" alt="poetry" loading="lazy">
-             <p><a href="books-poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a></p>
-         </div>
-
-    <!---Artical6----->
-          <div class="article">
-             <img src="INDEX/BLOG2.webp" alt="blog videos" loading="lazy">
-             <p><a href="blogs-blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a></p>
-         </div>
-
-     <!---Artical7----->
-          <div class="article">
-             <img src="INDEX/education.webp" alt="education-websites-india" loading="lazy">
-             <p><a href="best-education-websites-india.html"> Top 10 useful education Websites for students </a></p>
-         </div>
-
-	 <!---Artical10----->
-          <div class="article">
-             <img src="INDEX/banner.webp" alt="best mobile-games" loading="lazy">
-             <p><a href="best-online-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a></p>
-         </div>
-		 
-	 <!---Artical11----->
-          <div class="article">
-             <img src="INDEX/health.webp" alt="health exercise" loading="lazy">
-             <p><a href="health-tips-10-ways-to-stay-healthy.html"> discover vital health tips & advice for a thriving lifestyle </a></p>
-         </div>
-	 <!---Artical12----->
-          <div class="article">
-             <img src="INDEX/cash.webp" alt="paytm-cash-earning-apps" loading="lazy">
-             <p><a href="best-instant-free-paytm-cash-earning-apps.html"> Discover top paytm cash earning apps: maximize your earning Today </a></p>
-         </div>
-    <!-- You can add more articles using the same structure -->
+	    <section class="reqcontainer">
+    <h1>Recommended Pages</h1>
+    <div class="recommended-pages">
+      <!-- Page 1 -->
+      <a class="page" href="books-poem-sonnet-poetry.html">
+        <img src="INDEX/poetry.webp" alt="Beauty of poetry">
+        <div class="page-content">
+          <h2>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </h2>
+        </div>
+      </a>
+      <!-- Page 2 -->
+      <a class="page" href="index.html">
+        <img src="INDEX/Lod7.webp" alt="lord Krishna quotes">
+        <div class="page-content">
+          <h2>  50 Best Shri Krishna's Quotes From Srimad Bhagavad Gita  </h2>
+        </div>
+      </a>
+      <!-- Page 3 -->
+      <a class="page" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html">
+        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat">
+        <div class="page-content">
+          <h2> Explore the Epics: Ramayana and Mahabharata Q&A </h2>
+        </div>
+      </a>
+      <!-- Page 4 -->
+      <a class="page" href="best-online-mobile-games.html">
+        <img src="INDEX/banner.webp" alt="video games">
+        <div class="page-content">
+          <h2>  Best mobile games in India: discover the best Games, tips, and reviews  </h2>
+        </div>
+      </a>
+      <!-- Page 5 -->
+      <a class="page" href="best-instant-free-paytm-cash-earning-apps.html">
+        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps">
+        <div class="page-content">
+          <h2>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </h2>
+        </div>
+      </a>
+      <!-- Page 6 -->
+      <a class="page" href="best-free-movie-download-websites.html">
+        <img src="INDEX/movie.webp" alt="movie-download-websites">
+        <div class="page-content">
+          <h2> Download movies: best movie download websites in 2024  </h2>
+        </div>
+      </a>
+    </div>
   </section>
    
 
