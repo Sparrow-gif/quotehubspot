@@ -25,7 +25,20 @@
          Font-family: lato;
 	 }
 	   
-    
+      /* CSS for button styling */
+    .share-btn {
+        display: inline-block;
+        padding:5px 10px;
+        margin: 4px 0px;
+        background-color: #3d5998;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+		font-size:13px;
+    }
+
   .contest > #banner {
        /*  background-image:url('image/Spider.jpg'); */
        /* background-size:cover; */
@@ -37,6 +50,7 @@
          resize:both;
          overflow:auto;
           }
+		  
   .contest > #banner > img {
          width:100%;
          aspect-ratio:1/0.60;
@@ -85,8 +99,8 @@
      fieldset >  div > img {
          -o-object-fit:fill;
             object-fit:fill;
-         width:100px;
-         height: 80px;
+         width:80px;
+         height: 60px;
          border:none;
          outline:none;
          border-radius:6px;
@@ -299,7 +313,7 @@
 
  </style>
 </head>
-<body oncontextmenu="return false">
+<body oncontetmenu="return false">
 
          
 		 
@@ -308,13 +322,12 @@
                 <div class="heading">
                      <h1 style="color:#069E2D;"> what is cyber security ? </h1>                   
                      <p> Updated on : <time> jan 06, 2024 </time> </p>
+					 
+					 <!-- HTML structure for buttons -->
+                     <button class="share-btn" id="whatsappBtn">Share on WhatsApp</button>
+                     <button class="share-btn" id="facebookBtn">Share on Facebook</button>
                </div>
-                             <!-------heading logo------->
-               
-			   
-	
-   
-			   
+                     
                              <!-------main div------->
                 <article class="contest">
                      <div id="banner"> <img src="INDEX/CYBER1.webp" alt="cyber security"> </div><!-------headind banner------->
@@ -675,6 +688,19 @@
     </footer>																						
        
     <script>
+	
+	         // JavaScript to handle sharing functionality
+document.getElementById('whatsappBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://api.whatsapp.com/send?text=' + url, '_blank');
+});
+
+document.getElementById('facebookBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+});
+
+
 	            //ACCORDION
            var acc = document.getElementsByClassName("accordion");
            var i;
