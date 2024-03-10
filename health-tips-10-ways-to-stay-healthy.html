@@ -219,15 +219,31 @@
 		
 		
 		#goo > a {
+		     display:inline-block;
 		     text-decoration:none;
 			 margin:0px 5px;
 			 color:#5E2BFF;
 			 font-size:12px;
 			 Background: #f3f0fc;
 			 padding:4px 6px;
-			border-radius:10px;
+			 border-radius:10px;
 		}
 		
+		 /* CSS for button styling */
+    .share-btn {
+        display: inline-block;
+        padding:5px 10px;
+        margin: 4px 0px;
+        background-color: #3d5998;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+		font-size:13px;
+    }
+	
+	
    .tips > ul > li{
           padding:7px 0px;
 		  Font-size:;
@@ -573,10 +589,13 @@
                       <p id="goo"> <a href="#weight"> weight loss strategies </a> <a href="#Nutrition"> nutrition tips </a> <a href="#tips"> workout routines </a>   <p/>		  
                                 <!-------heading------->               
                      <h1 style="color:#6a40f5;"> Boost Your Well-being: Expert Health Tips for a Vibrant Life </h1>                                        
-					 <p> Updated on : jan 30, 2024 </p>
+					 <p> Updated on :<time> jan 30, 2024 </time></p>
 					
+					   <!-- HTML structure for buttons -->
+                     <button class="share-btn" id="whatsappBtn">Share on WhatsApp</button>
+                     <button class="share-btn" id="facebookBtn">Share on Facebook</button>
                              <!-------main div------->               
-                          <p class="texts" style="font-size:15px;">  
+                          <p class="texts">  
                            Welcome to our natural health and nutrition tips website, a hub for cultivating wellness through mindful choices.
 						   Dive into a treasure trove of advice, from nourishing recipes to evidence-backed insights, designed to harmonize
 						   your body and mind. Explore the transformative power of nature's remedies, embracing a holistic approach to health.
@@ -592,14 +611,14 @@
 		 <div class="tips" id="tips" style="padding: 6px 0px;">
                <h1 style="color:#6a40f5; padding:0px 6px;"> health tips </h1>
 			   <ul>
-			        <li>  Stay hydrated by drinking plenty of water throughout the day.   </li>
+			        <li>  Stay Hydrated By Drinking Bounty Of Water All Through The Day.  </li>
 			        <li>  Include a variety of colorful fruits and vegetables in your diet for a range of nutrients   </li>
 					<li>  Prioritize whole grains over refined grains for fiber and essential nutrients.   </li>
 			        <li>  Consume lean protein sources like fish, poultry, beans, and tofu.  </li>
 					<li>  Limit processed foods and added sugars in your diet for better overall health.   </li>
 			        <li>  Get regular exercise to support physical and mental well-being.   </li>
 					<li>  Practice mindful eating to be more aware of portion sizes and hunger cues.   </li>
-			        <li>  Include healthy fats from sources like avocados, nuts, and olive oil.   </li>
+			        <li>  Incorporate Sound Fats From Sources Like Avocados, Nuts, And Olive Oil.  </li>
 					<li>  Ensure adequate sleep to support your body's natural healing processes.   </li>
 			        <li>  Manage stress through activities like meditation, deep breathing, or yoga.   </li>
 					<li>  Incorporate probiotics from sources like yogurt or fermented foods for gut health.   </li>
@@ -610,7 +629,7 @@
 			        <li>  Limit alcohol consumption for overall health benefits.   </li>
 					<li>  Experiment with herbs and spices to enhance flavor without excessive salt or sugar.    </li>
 			        <li>  Be mindful of food sensitivities and allergies to avoid adverse reactions.   </li>
-					<li>  Don't skip meals; aim for regular, balanced meals and snacks.   </li>
+				    <li>  Do not Skip Suppers; Point For Normal, Adjusted Suppers And Snacks.   </li>
 			        <li>  Stay informed about nutrition trends but prioritize evidence-based advice.   </li>
 			   </ul>
 		 </div>
@@ -625,7 +644,7 @@
 			   <p> 5. <b> Get Enough Sleep : </b> Aim for 7-9 hours of quality sleep per night as inadequate sleep can disrupt hunger hormones and lead to weight gain. </p>
 			   <p> 6. <b> Stay Active Throughout the Day : </b>  Find opportunities to move more during the day, such as taking short walks, using stairs instead of elevators, or doing household chores. </p>
 			   <p> 7. <b> Stay Consistent : </b> Stick to your weight loss plan consistently, even on weekends or during holidays. </p>
-			   <p> 8. <b> Limit Alcohol Intake : </b> Alcoholic beverages are high in calories and can hinder weight loss progress. Limit your intake or opt for lower-calorie options. </p>
+			   <p> 8. <b> Limit Alcohol Intake : </b> Alcoholic beverages are high in calories and can hinder weight loss progress. Constrain Your Admissions Or Elect Lower-Calorie Choices. </p>
 			   <p> 9. <b> Consult a Professional : </b> Consider consulting a registered dietitian or nutritionist for personalized guidance and support on your weight loss journey. </p>
        </figure>		
 				 
@@ -747,7 +766,7 @@
 
                         <button class="accordion"> how can i contact the website for further questions ? </button>   <!----FAQ5----->
                         <div class="panel">
-                           <p>Feel free to use our contact form or email us with any inquiries. We value your feedback and are here to assist you.</p>
+                           <p>Feel free to use our contact form or email us with any inquiries. We esteem your input and are here to help you. </p>
                        </div>
  
                         <button class="accordion"> is the website accessible on mobile devices ? </button>     <!----FAQ6----->
@@ -860,6 +879,18 @@ document.getElementById("topButton").addEventListener("click", function () {
 });
 
     
+	 // JavaScript to handle sharing functionality
+document.getElementById('whatsappBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://api.whatsapp.com/send?text=' + url, '_blank');
+});
+
+document.getElementById('facebookBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+});
+
+	
 		        //ACCORDION
            var acc = document.getElementsByClassName("accordion");
            var i;
