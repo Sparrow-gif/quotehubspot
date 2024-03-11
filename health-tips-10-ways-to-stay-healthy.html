@@ -219,6 +219,19 @@ body {
            }
 		   
 		   
+   .share-btn {
+        display: inline-block;
+        padding:8px 10px;
+        margin: 4px 0px;
+        background-color: #3d5998;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+		font-size:13px;
+    }
+		   
 section {
     padding: 40px 20px 20px 20px;
 }
@@ -477,6 +490,9 @@ footer {
             <h1> Boost Your Well-Being: Expert Health Tips For A Vibrant Life </h1>
             <p> Welcome to FitLifeHub, your ultimate destination for health and fitness. Explore a wide range of articles, videos, and tips covering nutrition, workouts, mental wellness, and more.</p>
 			<p> update on:<time> 20 feb,2024 </time> </p>
+			<!-- HTML structure for buttons -->
+              <button class="share-btn" id="whatsappBtn">Share on WhatsApp</button>
+              <button class="share-btn" id="facebookBtn">Share on Facebook</button>
         </section>
 		
 		
@@ -740,9 +756,7 @@ footer {
 	
 	
 	
-    <script>
-
-            
+    <script>           
  
            const sidebar = document.getElementById("sidebar");
            const overlay = document.getElementById("overlay");
@@ -786,6 +800,18 @@ footer {
 
      // Scroll the container to center the active item
              scrollContainer.scrollLeft = scrollItemCenter;  	
+			 
+			 
+			  // JavaScript to handle sharing functionality
+document.getElementById('whatsappBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://api.whatsapp.com/send?text=' + url, '_blank');
+});
+
+document.getElementById('facebookBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+});
 	
 	</script>
 </body>
