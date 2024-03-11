@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"> <!--Roboto--Cabin--Open Sans--Lato---Montserrat--Quicksand---PT Sans--Playfair--Display--Domine---->
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
+    <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Unlock Your Wellness: Expert Health Tips and Advice for a Healthier You </title>
   <meta name="keywords" content="Healthy living tips, Nutrition tips, Fitness suggestions, Mental health tips, Weight loss tips, Heart health advice, Skin care tips for health">
@@ -14,16 +14,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
-   <style>
-   
-  * {
+  <style>
+        /* Basic styles */
+body {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
           box-sizing:border-box;
           font-family: roboto;
-          text-transform:capitalize;  
-        }  
+          text-transform:capitalize; 
+}
+  h3 {font-size:24px;}
   body.sidebar-open {  overflow: hidden; }
 	  html {  
          scroll-behavior:smooth;
@@ -216,164 +217,134 @@
           border-radius:0px;
           border:1px none #FFFFFF; */
            }
-		
-		
-		#goo > a {
-		     display:inline-block;
-		     text-decoration:none;
-			 margin:0px 5px;
-			 color:#5E2BFF;
-			 font-size:12px;
-			 Background: #f3f0fc;
-			 padding:4px 6px;
-			 border-radius:10px;
-		}
-		
-		 /* CSS for button styling */
-    .share-btn {
-        display: inline-block;
-        padding:5px 10px;
-        margin: 4px 0px;
-        background-color: #3d5998;
-        color: #fff;
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-		font-size:13px;
-    }
-	
-	
-   .tips > ul > li{
-          padding:7px 0px;
-		  Font-size:;
-		  color:;
-         font-family:;
-   }
-   main {
-          display:-webkit-box;
-          display:-ms-flexbox;
-          display:flex;
-          -ms-flex-wrap:wrap;
-              flex-wrap:wrap;
-          -ms-flex-pack: distribute;
-              justify-content: space-around;
-          -webkit-box-align:center;
-              -ms-flex-align:center;
-                  align-items:center;
-        /*  background: #d5ebf7;  */
-          gap:17px 15px;
-          padding:10px;
-       }
-    main > img {
-	      min-width:330px;
-          max-width:330px;
-          aspect-ratio: 1/1;
-          margin:10px auto;     
-          border:0px solid black;  
-          border-radius:4px;
-          -webkit-box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
-                  box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
-         }
- 
- 
-      #conclution1 {
-        	  display:block;
-		      padding:10px 10px;
-		     }	
-        #conclution2 { display:none;}
- 
- 
-       fieldset {
-          padding:10px;
-		  margin:0 auto;
-       }
-     fieldset >  div {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack:justify;
-            -ms-flex-pack:justify;
-                justify-content:space-between;
-        -webkit-box-align:center;
-            -ms-flex-align:center;
-                align-items:center;
-        -ms-flex-line-pack:center;
-            align-content:center;
-        padding:8px;
-        margin:10px auto ;
-		padding:10px;
-		width:100%;
-        border-bottom:2px solid #eee;
-      }
-     fieldset >  div > a { 
-         text-decoration: none; 
-         color: black;
-         Font-size:14px;
-         cursor:pointer;
-         -webkit-transition-duration:0.3s;
-              -o-transition-duration:0.3s;
-                 transition-duration:0.3s;     
-       }
-   
-     fieldset >  div > img {
-         -o-object-fit:fill;
-            object-fit:fill;
-         width:80px;
-         height: 60px;
-         border:none;
-         outline:none;
-		 border-radius:6px;
-        }
-	   
-	    .askqtn {
-	        margin:0 auto;
-			width:90%;
-	      }
-      .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            -webkit-transition: 0.4s;
-            -o-transition: 0.4s;
-            transition: 0.4s;
-            margin:10px auto;
-	    text-transform:lowercase;
-	  }
-
-
-.accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+		   
+		   
+section {
+    padding: 40px 20px 20px 20px;
 }
 
-  .askqtn > .active:after {
-           content: "\2212";
+
+/* Additional styles for content */
+section h1 {
+    color: #333;
+}
+
+section p {
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Image styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+ .content > article > ul > li { margin:10px;}
+ 
+ /* CSS for Fruits Section */
+#fruits {
+    padding: 20px;
+}
+
+.fruit-item {
+    margin-bottom: 20px;
+}
+
+.fruit-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Styling */
+
+    .fruit-item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
     }
 
-    .panel {
-         padding: 0 18px;
-         background-color: white;
-         max-height: 0;
-         overflow: hidden;
-        -webkit-transition: max-height 0.2s ease-out;
-        -o-transition: max-height 0.2s ease-out;
-         transition: max-height 0.2s ease-out;
-         text-transform:lowercase;
-		 font-size:15px ;
+    .fruit-item img {
+        max-width: 80%;
+		aspect-ratio:1/1;
+    }
+
+ 
+     .container {
+         max-width: 100%;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #fff;
       }
 
+   .container > h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .recommended-pages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .page {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      display: block;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page img {
+      max-width: 100%;
+      aspect-ratio:1/0.70;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page-content {
+      padding: 15px 5px;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+	  
+	  
+      .page {
+        margin-bottom: 20px;
+      }
+    }
+	
 
 
-    footer {
+footer {
            background: #f0f0f0;
             text-align: center;
             color: #181f1a;
@@ -397,36 +368,8 @@
 			         margin: 10px;
                      Font-size:1.50rem;  
 		 }
-     
-    #whatsapp-share-btn {
-	      position: fixed;
-          bottom: 2%;
-          right: 6px;
-          background-color: #14e069 ;
-          color: #fff;
-          border: none;
-          border-radius: 50%;
-          padding: 10px 10px;
-          font-size:24px;
-          cursor: pointer;
-          z-index:1 ;
-        }
-    #topButton {
-          display: none;
-          position: fixed;
-          bottom: 2%;
-          right: 6px;
-          color: #fff;
-          background: #5E2BFF; /*#16df7e; */
-          width: 40px;
-          height: 40px;
-          border-radius: 4px;
-          z-index:1 ;
-		  border:none;
-		  font-size: 24px;
-        }
-  
-   @media only screen and (max-width:767px) { 
+		 
+ @media only screen and (max-width:767px) { 
 	  
 	  }
 	  
@@ -436,58 +379,21 @@
 	           margin:0 auto;
 		       width:90%;
 			   }
-			   
-			 main {
-          		  gap:6px;
-                  display:-ms-grid;
-                  display:grid;
-                  grid-template-columns:repeat(auto-fit,minmax(min(18.5rem,100%),1fr)) ;
-				}
-		       	  fieldset > div { width:80%;}
-	          }
-	   
+			    .recommended-pages {
+                           display: grid;
+                           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                           gap: 20px;
+                      }
+
+   }
+   
    @media only screen and (min-width:992px) { 
 	           html {
 	               margin:0 auto;
 			       max-width:65%;
                    min-width:990px;
-		      }   
-			   .scroll-container { display:none; }
-			   #dites { margin-top:50px; }
-		    main {
-                 display:-webkit-box;
-                 display:-ms-flexbox;
-                 display:flex;
-                 -ms-flex-wrap:wrap;
-                     flex-wrap:wrap;
-                 -webkit-box-pack: justify;
-                     -ms-flex-pack: justify;
-                         justify-content: space-between;
-                 -webkit-box-align:center;
-                     -ms-flex-align:center;
-                         align-items:center;
-       /*   background: #d5ebf7;  */
-                 gap:17px 15px;
-                  padding:10px;
-         }
-		   fieldset > div { width:100%;}
-         article {
-              display:-webkit-box;
-              display:-ms-flexbox;
-              display:flex;
-              -webkit-box-pack: space-arround ;
-                  -ms-flex-pack: space-arround ;
-                      justify-content: space-arround ;  
-              gap:3%;			  
-		   }	
-          article > main { width :65%;}		
-           article > aside { width :30%;}
-        #conclution1 { display:none;}	
-        #conclution2 { display:block; padding:10px 10px;}	
-
-
-             
-         .menu li a:hover {
+		      } 
+			   .menu li a:hover {
               background-color: #6b40f7;
               color: white;
             }	
@@ -506,36 +412,18 @@
         .navbar-toggler:hover {
 		       background: #ccc ;
 			   border-radius:50%;
-		    }	       
-          .accordion >.active, .accordion:hover {
-                   background-color: #ccc;
-           }
-	 fieldset >  div > a:hover { 
-         text-decoration: underline; 
-         color: #6828de;
-         padding:6px;
-      }
-	   
-      }
-	  
-	  
-	/*   @media(prefers-color-scheme:light) {  
-	         body {
-			     Background:#FFFFFF;
-				 color:#000000;
-			 }
-	  }
-     
-	  @media(prefers-color-scheme:dark) { 
-	         body {
-			     Background:#000000;
-				 color:#FFFFFF;
-			 }
-	  }  */
-   </style>
-  </head>
-  <body oncontextmenu="return false">
-         <header id="header">
+		    }		                                    
+         .head-logo > a:hover{ -webkit-transform:scale(1.20); -ms-transform:scale(1.20); transform:scale(1.20)}
+		 
+		  .page:hover {
+                 transform: translateY(-5px);
+            }
+   }
+  </Style>
+  
+</head>
+<body>
+    <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
             <h1>Quotehubspot</h1>
@@ -566,7 +454,7 @@
     </aside>
 </header>
 
-	    <!-- Overlay to cover content behind sidebar -->
+   <!-- Overlay to cover content behind sidebar -->
            <div id="overlay"></div>
 	  
          <nav class="scroll-container" title="scroll-ber">
@@ -582,216 +470,252 @@
                <a class="scroll-item" id="active" href="health-tips-10-ways-to-stay-healthy.html" target="_self"> health </a>
 		       <!-- Add more items as needed -->
        </nav>  
-          
-                 
-				 
-		  <section id="dites" style="padding:0px 8px;">  
-                      <p id="goo"> <a href="#weight"> weight loss strategies </a> <a href="#Nutrition"> nutrition tips </a> <a href="#tips"> workout routines </a>   <p/>		  
-                                <!-------heading------->               
-                     <h1 style="color:#6a40f5;"> Boost Your Well-being: Expert Health Tips for a Vibrant Life </h1>                                        
-					 <p> Updated on :<time> jan 30, 2024 </time></p>
-					
-					   <!-- HTML structure for buttons -->
-                     <button class="share-btn" id="whatsappBtn">Share on WhatsApp</button>
-                     <button class="share-btn" id="facebookBtn">Share on Facebook</button>
-                             <!-------main div------->               
-                          <p class="texts">  
-                           Welcome to our natural health and nutrition tips website, a hub for cultivating wellness through mindful choices.
-						   Dive into a treasure trove of advice, from nourishing recipes to evidence-backed insights, designed to harmonize
-						   your body and mind. Explore the transformative power of nature's remedies, embracing a holistic approach to health.
-						   Whether you seek nutritional guidance, wellness practices, or simply want to enhance your vitality, our platform 
-						   is your ally. Join us in making informed choices that resonate with your body's innate balance, promoting a healthier 
-						   and more vibrant life. Here, we share a journey towards optimal well-being, encouraging you to thrive through the 
-						   wisdom of natural health and nutrition.					
-                         </p>                    
-         </section>
+	   
+
+   <main>
+        <section id="explore" style="margin-top:0px;">
+            <h1> Boost Your Well-Being: Expert Health Tips For A Vibrant Life </h1>
+            <p> Welcome to FitLifeHub, your ultimate destination for health and fitness. Explore a wide range of articles, videos, and tips covering nutrition, workouts, mental wellness, and more.</p>
+			<p> update on:<time> 20 feb,2024 </time> </p>
+        </section>
 		
 		
+         <section id="Health Tips">
+            <h2> Health Tips </h2>
+            <div class="content">
+                <article>
+                    <p>  Fuel your body for optimal performance and overall well-being with our nutrition resources. From healthy recipes to expert advice on meal planning and dietary supplements, we have everything you need to make informed choices and nourish your body from the inside out.</p>
+                    <h3> Top Health Tips:</h3>
+                    <ul>
+                        <li> Stay hydrated throughout the day by Drinking Bounty Of Water. Point for at slightest 8 glasses per day. </li>
+                        <li> Get enough sleep. Adults generally need 7-9 hours of sleep each night for optimal health.</li>
+                        <li> Practice good hygiene habits, such as washing your hands regularly and covering your mouth when you cough or sneeze.  </li>
+                        <li> Oversee stretch through unwinding procedures like profound breathing, contemplation, or yoga. </li>
+                    </ul>
+                </article>
+                <figure>
+                    <img src="BLOG2.jpg" alt="Nutrition">
+                    <figcaption>Nutrition</figcaption>
+                </figure>
+            </div>
+        </section>
 		
-		 <div class="tips" id="tips" style="padding: 6px 0px;">
-               <h1 style="color:#6a40f5; padding:0px 6px;"> health tips </h1>
-			   <ul>
-			        <li>  Stay Hydrated By Drinking Bounty Of Water All Through The Day.  </li>
-			        <li>  Include a variety of colorful fruits and vegetables in your diet for a range of nutrients   </li>
-					<li>  Prioritize whole grains over refined grains for fiber and essential nutrients.   </li>
-			        <li>  Consume lean protein sources like fish, poultry, beans, and tofu.  </li>
-					<li>  Limit processed foods and added sugars in your diet for better overall health.   </li>
-			        <li>  Get regular exercise to support physical and mental well-being.   </li>
-					<li>  Practice mindful eating to be more aware of portion sizes and hunger cues.   </li>
-			        <li>  Incorporate Sound Fats From Sources Like Avocados, Nuts, And Olive Oil.  </li>
-					<li>  Ensure adequate sleep to support your body's natural healing processes.   </li>
-			        <li>  Manage stress through activities like meditation, deep breathing, or yoga.   </li>
-					<li>  Incorporate probiotics from sources like yogurt or fermented foods for gut health.   </li>
-			        <li>  Choose organic or locally sourced produce when possible to reduce pesticide exposure.   </li>
-					<li>  Include omega-3 fatty acids by eating fish, flaxseeds, or chia seeds.   </li>
-			        <li>  Control salt intake to maintain healthy blood pressure levels.   </li>
-					<li>  Eat smaller, balanced meals throughout the day to sustain energy levels.   </li>
-			        <li>  Limit alcohol consumption for overall health benefits.   </li>
-					<li>  Experiment with herbs and spices to enhance flavor without excessive salt or sugar.    </li>
-			        <li>  Be mindful of food sensitivities and allergies to avoid adverse reactions.   </li>
-				    <li>  Do not Skip Suppers; Point For Normal, Adjusted Suppers And Snacks.   </li>
-			        <li>  Stay informed about nutrition trends but prioritize evidence-based advice.   </li>
-			   </ul>
-		 </div>
-				 
-				 
-		 <figure id="weight" style="padding:10px;">
-               <h1 style="color:#6a40f5;"> weight loss strategies </h1>
-			   <p> 1. <b> Balanced Diet : </b> Focus on consuming a balanced diet rich in fruits, vegetables, lean proteins, and whole grains. Aim for portion control and moderation. </p>
-			   <p> 2. <b> Regular Exercise : </b> Incorporate both cardiovascular exercises (like walking, jogging, swimming) and strength training into your routine to burn calories and build muscle. </p>
-			   <p> 3. <b> Monitor Caloric Intake : </b> Keep track of your daily food intake and ensure you are consuming fewer calories than you expend to create a calorie deficit for weight loss. </p>
-			   <p> 4. <b> Include Protein : </b> Incorporate protein-rich foods into your meals and snacks as they can help you feel fuller for longer and preserve muscle mass during weight loss. </p>
-			   <p> 5. <b> Get Enough Sleep : </b> Aim for 7-9 hours of quality sleep per night as inadequate sleep can disrupt hunger hormones and lead to weight gain. </p>
-			   <p> 6. <b> Stay Active Throughout the Day : </b>  Find opportunities to move more during the day, such as taking short walks, using stairs instead of elevators, or doing household chores. </p>
-			   <p> 7. <b> Stay Consistent : </b> Stick to your weight loss plan consistently, even on weekends or during holidays. </p>
-			   <p> 8. <b> Limit Alcohol Intake : </b> Alcoholic beverages are high in calories and can hinder weight loss progress. Constrain Your Admissions Or Elect Lower-Calorie Choices. </p>
-			   <p> 9. <b> Consult a Professional : </b> Consider consulting a registered dietitian or nutritionist for personalized guidance and support on your weight loss journey. </p>
-       </figure>		
-				 
-				 
-				 		 
-           <!-----Main Body------>
-   <article>
-        <main id="Nutrition">		  
-           <img src="HEALTH/apple.webp" alt="froots" loading="lazy">   <!------Image 01------->
-           <img src="HEALTH/banana.webp" alt="froots" loading="lazy">   <!------Image 02------->
-           <img src="HEALTH/berries.webp" alt="froots" loading="lazy">   <!------Image 03------->
-           <img src="HEALTH/grapes.webp" alt="froots" loading="lazy">   <!------Image 04------->
-           <!----<img src="HEALTH/kiwi.webp" alt="tips5" loading="lazy">   ------Image 05------->
-           <img src="HEALTH/orange.webp" alt="froots" loading="lazy">   <!------Image 06------->
-           <img src="HEALTH/papaya.webp" alt="froots" loading="lazy">   <!------Image 07------->
-           <img src="HEALTH/pineapple.webp" alt="froots" loading="lazy">   <!------Image 08------->
-           <img src="HEALTH/potato.webp" alt="froots" loading="lazy">   <!------Image 09------->
-      </main>
+		
+        <section id="nutrition">
+            <h2>Nutrition</h2>
+            <div class="content">
+                <article>
+                    <p>Fuel your body for optimal performance and overall well-being with our nutrition resources. From healthy recipes to expert advice on meal planning and dietary supplements, we have everything you need to make informed choices and nourish your body from the inside out.</p>
+                    <h3>Top Nutrition Tips:</h3>
+                    <ul>
+                        <li> Eat A Assortment Of Natural products And Vegetables Each Day To Guarantee You Get A Wide Run Of Vitamins And Minerals.  </li>
+                        <li> Include lean protein sources such as chicken, fish, tofu, and legumes in your meals to support muscle growth and repair. </li>
+                        <li> Select entirety grains over refined grains for included fiber, vitamins, and minerals.  </li>
+                        <li> Remain hydrated by drinking bounty of water all through the day, and constrain sugary drinks and over the top caffeine.  </li>
+                        <li> Hone parcel control to dodge gorging and keep up a solid weight.  </li>
+                    </ul>
+                </article>
+                <figure>
+                    <img src="BLOG2.jpg" alt="Nutrition">
+                    <figcaption>Nutrition</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="fitness">
+            <h2>Fitness</h2>
+            <div class="content">
+                <article>
+                    <p>Whether you're a seasoned athlete or just starting your fitness journey, our fitness section has something for everyone. From workout routines and exercise tutorials to tips for injury prevention and recovery, we're here to help you stay active, motivated, and injury-free.</p>
+                    <h3>Top Fitness Tips:</h3>
+                    <ul>
+                       <li> Set practical objectives and make a workout arrange that fits your plan and wellness level.  </li>
+                       <li> Incorporate a assortment of works out in your schedule to target diverse muscle bunches and anticipate boredom.  </li>
+                       <li> Warm up some time recently working out to get ready your muscles and decrease the hazard of damage.  </li>
+                       <li> Listen to your body and take rest days when required to permit for recuperation and anticipate overtraining. </li>
+                       <li> Stay consistent with your workouts and make physical activity a regular part of your lifestyle.</li>
+                    </ul>
+                </article>
+                <figure>
+                    <img src="BLOG2.jpg" alt="Fitness">
+                    <figcaption>Fitness</figcaption>
+                </figure>
+            </div>
+        </section>
          
-		 
-     <div id="conclution1">
-         <h1 style="color:#200a57;padding:4px;"> conclution </h1>
-		 <p style="color:; padding:0px 2px;font-size:15px;"> In the vibrant tapestry of life, prioritizing our well-being becomes paramount, and the journey to holistic health unfolds seamlessly with the wisdom gleaned from a natural health tips website. 
+		<section id="Exercise">
+            <h2>  Exercise Tips  </h2>
+            <div class="content">
+                <article>
+                    <p>  Whether you're a seasoned athlete or just starting your fitness journey, our fitness section has something for everyone. From workout routines and exercise tutorials to tips for injury prevention and recovery, we're here to help you stay active, motivated, and injury-free.</p>
+                    <h3> Top Exercise Tips: </h3>
+                    <ul>
+                        <li> Start slow if you're new to exercise and gradually increase intensity and duration over time.</li>
+                        <li> Join both cardio and quality preparing works out into your schedule for ideal comes about. </li>
+                        <li> Listen to your body and rest after you have to be. Pushing through torment can lead to damage.  </li>
+                        <li> Stay consistent with your exercise routine, but don't be too hard on yourself if you miss a day. Fair get back on track the following day.</li>
+                   </ul>
+                </article>
+                <figure>
+                    <img src="BLOG2.jpg" alt="Fitness">
+                    <figcaption>Fitness</figcaption>
+                </figure>
+            </div>
+        </section>
+		
+		
+        <section id="mind-body">
+            <h2>Mind & Body</h2>
+            <div class="content">
+                <div class="left">
+                    <p>Achieving optimal health and fitness isn't just about physical activity and nutrition—it's also about nurturing your mental and emotional well-being. In this section, you'll find resources for managing stress, improving sleep quality, practicing mindfulness, and cultivating a positive mindset.</p>
+               </div>
+                <div class="right">
+                     <img src="BLOG2.jpg" alt="Mind & Body">
+               </div>
+          </div>
+    </section>
+        
+		
+     <section id="fruits">
+        <h2> some frutis that will be help you to maintain body fitness </h2>
+           <div class="fruit-item">
+               <img src="apple.jpg" alt="apple">
+              
+               <img src="banana.jpg" alt="banana">
+			   
+			   <img src="apple.jpg" alt="pineapple">
+              
+               <img src="banana.jpg" alt="watermelon">
+         </div>
+           <!-- Add more fruit items as needed -->
+     </section>
+	         <!-- Add more semantic sections as needed -->
+    </main>
+
+
+    
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>  At Fitness in our webpage, we're passionate about empowering individuals to lead healthier, happier lives. Our team is committed to providing valuable 
+		     resources and support for your health and fitness journey. Learn more about us and our mission.
+		</p>
+    </section>
+	
+	
+	<section id="conclusion">
+        <h2> conclution </h2>
+        <p> In the vibrant tapestry of life, prioritizing our well-being becomes paramount, and the journey to holistic health unfolds seamlessly with the wisdom gleaned from a natural health tips website. 
 		     As the digital gateway to a rejuvenated existence, this platform serves as a beacon of empowerment, offering a kaleidoscope of insights that harmonize mind, body, and spirit. Nurturing a 
 		     wholesome lifestyle, it not only imparts the significance of nourishing foods and invigorating exercises but also advocates for the healing power of nature's remedies. Guiding us towards a 
 			 balanced equilibrium, the website inspires a mindful approach to health, encapsulating the essence of wellness in its purest form. Embracing this digital sanctuary, we embark on a transformative 
 			 odyssey, where the amalgamation of nature's bounty and timeless wisdom coalesce to sculpt a radiant and resilient version of ourselves. Step into the sanctuary of well-being, where the journey to 
 			 vitality awaits – a testament to the beauty of embracing natural health.
-	    </p>
-	</div>   
+		</p>
+    </section>
+	
 
-
-       <aside>
-		    <fieldset style="border:none;">
-                <legend style="border:none;color:#200a57;"><h1> Our Recommended Articals </h1></legend>
-           
-                 <div> <!-----Post 1------>
-                       <a href="best-free-movie-download-websites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
-                       <img src="INDEX/movie.webp" alt="best movie Download website" loading="lazy">
-                 </div>
-
-                <div> <!-----Post 3------>
-                     <a href="index.html"> Explore enlightening quotes from the Bhagavad Gita by Sri Krishna </a>
-                    <img src="INDEX/Lod7.webp" alt="lord krishna quotes" loading="lazy">
-                  </div>
-
-                  <div> <!-----Post 4------>
-                    <a href="cyber-security-what-is-cybersecurity.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
-                    <img src="INDEX/CYBER1.webp" alt="cyber Security" loading="lazy">
-                 </div>
-
-                   <div> <!-----Post 5------>
-                     <a href="books-poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
-                     <img src="INDEX/poetry.webp" alt="Poetry" loading="lazy">
-                  </div>
-
-                 <div> <!-----Post 6----->
-                      <a href="blogs-blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
-                     <img src="INDEX/BLOG2.webp" alt="blogs" loading="lazy">
-                 </div>
-  
-                  <div> <!-----Post 7----->
-                      <a href="best-education-websites-india.html"> Top 10 useful education Websites for students </a>
-                      <img src="INDEX/education.webp" alt="best education websites india" loading="lazy">
-                  </div>
-				
-				   <div> <!-----Post 8----->
-                      <a href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
-                      <img src="INDEX/cute.webp" alt="ramayan & mahabharat" loading="lazy">
-                  </div>
-				  
-				   <div> <!-----Post 9----->
-                      <a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
-                      <img src="INDEX/loot.webp" alt="amazon shoping" loading="lazy">
-                  </div>
-				  
-				  <div> <!-----Post 10----->
-                      <a href="best-online-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
-                      <img src="INDEX/banner.webp" alt="video games" loading="lazy">
-                  </div>
-				  
-				  <div> <!-----Post 11----->
-                      <a href="health-tips-10-ways-to-stay-healthy.html"> discover vital health tips & advice for a thriving lifestyle </a>
-                      <img src="INDEX/health.webp" alt="health exercise" loading="lazy">
-                  </div>
-				  
-				  <div> <!-----Post 12----->
-                      <a href="best-instant-free-paytm-cash-earning-apps.html"> Discover top paytm cash earning apps: maximize your earning Today </a>
-                      <img src="INDEX/cash.webp" alt="Paytm Cash earning apps" loading="lazy">
-                  </div>
-             </fieldset> 
-
-
-
-
-                <section class="askqtn"><!-------frequnncy asked questin section----------------->
+    <section class="askqtn"><!-------frequnncy asked questin section----------------->
 				       
-					   <h1 style="color:#200a57;"> FAQ </h1>
-					    
-				       <button class="accordion"> what kind of health tips can i find on the website  ? </button>  <!----FAQ1----->
-                        <div class="panel">
-                           <p>Our website offers a diverse range of health tips covering nutrition, fitness, mental well-being, and general lifestyle advice .</p>
-                       </div>
+	      <h1 style="text-align:center;color:#5e2bff;padding:6px;"> FAQs </h1>
+					    <article>
+				           <h3> Q1. what kind of health tips can i find on the website ? </h3>  <!----FAQ1----->
+        
+                           <p> <strong> A1. </strong>
+ 						         Our website offers a diverse range of health tips covering nutrition, 
+						         fitness, gym exercise, and general lifestyle advice .            
+						  </p>
+                       </article>
 
-                        <button class="accordion"> can i trust the information on the website ? </button>   <!----FAQ2----->
-                        <div class="panel">
-                           <p>Absolutely. We prioritize evidence-based information and regularly update our content to reflect the latest health guidelines.</p>
-                       </div>
+                        <article>
+  						    <h3> Q2. can i trust the information on the website ? </h3>   <!----FAQ2----->
+                            <p> <strong> A2. </strong>
+    							Absolutely. We prioritize evidence-based information and regularly update our content to reflect the latest health guidelines.
+						   </p>
+                       </article>
  
-                        <button class="accordion"> is the website suitable for all ages ? </button>     <!----FAQ3----->
-                        <div class="panel">
-                           <p>Yes, our health tips cater to a broad audience, with content tailored to various age groups and health concerns.</p>
-                       </div>
+                       <article>
+						   <h3> Q3. is the website suitable for all ages ? </h3>     <!----FAQ3----->
+                           <p> <strong> A3. </strong> 
+						        Yes, our health tips cater to a broad audience, with content tailored to various age groups and health concerns.
+						  </p>
+                       </article>
+
+                        <article>
+  						    <h3> Q4. how often is the content updated ? </h3>   <!----FAQ4----->
+                           <p> <strong> A4. </strong> 
+						       We strive to keep our content current. Updates occur regularly to align with the latest health research and recommendations.
+						  </p>
+                       </article>
+ 
+                        <article>
+						   <h3> Q5. how can i contact the website for further questions ? </h3>     <!----FAQ5----->
+                           <p> <strong> A5. </strong> 
+						        Feel free to use our contact form or email us with any inquiries. We esteem your input and are here to help you.
+						  </p>
+                       </article>
+					   
+					   <article>
+					         <h3> Q5. Is The Site Available On Versatile Gadgets ?  </h3>  <!----FAQ5----->
+							 <p> <strong> A5. </strong> 
+							      Yes, our website is designed to be responsive, providing a seamless experience on both desktop and mobile devices for your convenience.
+							</p>
+					   </article>
+			    </Section>		
+
+
+
+ <section class="container">
+    <h1>Recommended Pages</h1>
+    <div class="recommended-pages">
+      <!-- Page 1 -->
+      <a class="page" href="books-poem-sonnet-poetry.html">
+        <img src="INDEX/poetry.webp" alt="Beauty of poetry">
+        <div class="page-content">
+          <h2>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </h2>
+        </div>
+      </a>
+      <!-- Page 2 -->
+      <a class="page" href="index.html">
+        <img src="INDEX/Lod7.webp" alt="lord Krishna quotes">
+        <div class="page-content">
+          <h2>  50 Best Shri Krishna's Quotes From Srimad Bhagavad Gita  </h2>
+        </div>
+      </a>
+      <!-- Page 3 -->
+      <a class="page" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html">
+        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat">
+        <div class="page-content">
+          <h2> Explore the Epics: Ramayana and Mahabharata Q&A </h2>
+        </div>
+      </a>
+      <!-- Page 4 -->
+      <a class="page" href="best-online-mobile-games.html">
+        <img src="INDEX/banner.webp" alt="video games">
+        <div class="page-content">
+          <h2>  Best mobile games in India: discover the best Games, tips, and reviews  </h2>
+        </div>
+      </a>
+      <!-- Page 5 -->
+      <a class="page" href="best-instant-free-paytm-cash-earning-apps.html">
+        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps">
+        <div class="page-content">
+          <h2>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </h2>
+        </div>
+      </a>
+      <!-- Page 6 -->
+      <a class="page" href="best-free-movie-download-websites.html">
+        <img src="INDEX/movie.webp" alt="movie-download-websites">
+        <div class="page-content">
+          <h2> Download movies: best movie download websites in 2024  </h2>
+        </div>
+      </a>
+    </div>
+  </section>
   
-                        <button class="accordion"> how often is the content updated ? </button>     <!----FAQ4----->
-                        <div class="panel">
-                           <p>We strive to keep our content current. Updates occur regularly to align with the latest health research and recommendations.</p>
-                       </div>
-
-                        <button class="accordion"> how can i contact the website for further questions ? </button>   <!----FAQ5----->
-                        <div class="panel">
-                           <p>Feel free to use our contact form or email us with any inquiries. We esteem your input and are here to help you. </p>
-                       </div>
- 
-                        <button class="accordion"> is the website accessible on mobile devices ? </button>     <!----FAQ6----->
-                        <div class="panel">
-                           <p>Yes, our website is designed to be responsive, providing a seamless experience on both desktop and mobile devices for your convenience.</p>
-                       </div>
-			    </Section>
-        </aside>				
-   </article>  
-
- 
-       <div id="conclution2">
-           <h1 style="color:#200a57; padding:10px;font-weight: ;">  conclution </h1>
-           <p style="color:; padding:15px 25px;"> In the vibrant tapestry of life, prioritizing our well-being becomes paramount, and the journey to holistic health unfolds seamlessly with the wisdom gleaned from a natural health tips website. 
-		       As the digital gateway to a rejuvenated existence, this platform serves as a beacon of empowerment, offering a kaleidoscope of insights that harmonize mind, body, and spirit. Nurturing a 
-			   wholesome lifestyle, it not only imparts the significance of nourishing foods and invigorating exercises but also advocates for the healing power of nature's remedies. Guiding us towards a 
-			   balanced equilibrium, the website inspires a mindful approach to health, encapsulating the essence of wellness in its purest form. Embracing this digital sanctuary, we embark on a transformative 
-			   odyssey, where the amalgamation of nature's bounty and timeless wisdom coalesce to sculpt a radiant and resilient version of ourselves. Step into the sanctuary of well-being, where the journey to 
-			   vitality awaits – a testament to the beauty of embracing natural health. 
-		  </p>
-      </div> 
-   
-   
-   
-        <!-----------------------------------
+  
+       <!-----------------------------------
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
      <footer>
@@ -813,12 +737,13 @@
             <a href="my-sitemap.html" target="_self">  Sitemap  </a>
         </nav>
     </footer>
-     
-        <!----Go To Top Button------>
-     <button id="topButton"> <i class="fa-solid fa-arrow-up"></i> </button>
+	
+	
+	
+    <script>
 
+            
  
-   <script>
            const sidebar = document.getElementById("sidebar");
            const overlay = document.getElementById("overlay");
            const toggleButton = document.getElementById("toggleButton");
@@ -860,52 +785,8 @@
               const scrollItemCenter = scrollItemLeft - (containerWidth - scrollItemWidth) / 2;
 
      // Scroll the container to center the active item
-             scrollContainer.scrollLeft = scrollItemCenter;
-
-          /* Go To Top Button */
-
-      window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("topButton").style.display = "block";
-  } else {
-    document.getElementById("topButton").style.display = "none";
-  }
-};
-
-     // Scroll to the top when the button is clicked
-document.getElementById("topButton").addEventListener("click", function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
-
-    
-	 // JavaScript to handle sharing functionality
-document.getElementById('whatsappBtn').addEventListener('click', function() {
-    var url = encodeURIComponent(window.location.href);
-    window.open('https://api.whatsapp.com/send?text=' + url, '_blank');
-});
-
-document.getElementById('facebookBtn').addEventListener('click', function() {
-    var url = encodeURIComponent(window.location.href);
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
-});
-
+             scrollContainer.scrollLeft = scrollItemCenter;  	
 	
-		        //ACCORDION
-           var acc = document.getElementsByClassName("accordion");
-           var i;
-
-          for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-              this.classList.toggle("active");
-              var panel = this.nextElementSibling;
-         if (panel.style.maxHeight) {
-             panel.style.maxHeight = null;
-      } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-     } 
-  });
-}
-   </script>
-   </body>
+	</script>
+</body>
 </html>
