@@ -24,7 +24,7 @@ body {
           font-family: roboto;
           text-transform:capitalize; 
 }
-  h3 {font-size:24px;}
+  h3 {font-size:22px;}
   body.sidebar-open {  overflow: hidden; }
 	  html {  
          scroll-behavior:smooth;
@@ -243,7 +243,7 @@ section h1 {
 }
 
 section p {
-    color: #666;
+    color: ;
     line-height: 1.6;
     margin-top: 20px;
 }
@@ -257,10 +257,17 @@ section p {
 }
 
 .content img {
-    max-width: 100%;
+     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
+ @media screen and (min-width: 600px) {
+      .content img {
+        max-width: 580px;
+      }
+ }	  
+	  
  .content > article > ul > li { margin:10px;}
  
  /* CSS for Fruits Section */
@@ -273,20 +280,20 @@ section p {
 }
 
 .fruit-item img {
-    max-width: 100%;
-    height: auto;
+     max-width: 100%;
+     height: auto;
 }
 
 /* Responsive Styling */
 
     .fruit-item {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px 20px;
     }
 
     .fruit-item img {
-        max-width: 80%;
+        max-width: 100%;
 		aspect-ratio:1/1;
     }
 
@@ -510,7 +517,7 @@ footer {
                     </ul>
                 </article>
                 <figure>
-                    <img src="BLOG2.jpg" alt="Nutrition">
+                    <img src="HEALTH/health.webp" alt="Nutrition" loading="auto">
                     <figcaption>Nutrition</figcaption>
                 </figure>
             </div>
@@ -532,7 +539,7 @@ footer {
                     </ul>
                 </article>
                 <figure>
-                    <img src="BLOG2.jpg" alt="Nutrition">
+                    <img src="HEALTH/Nutrition.webp" alt="Nutrition" loading="auto">
                     <figcaption>Nutrition</figcaption>
                 </figure>
             </div>
@@ -553,7 +560,7 @@ footer {
                     </ul>
                 </article>
                 <figure>
-                    <img src="BLOG2.jpg" alt="Fitness">
+                    <img src="HEALTH/fitness.webp" alt="Fitness" loading="auto">
                     <figcaption>Fitness</figcaption>
                 </figure>
             </div>
@@ -573,7 +580,7 @@ footer {
                    </ul>
                 </article>
                 <figure>
-                    <img src="BLOG2.jpg" alt="Fitness">
+                    <img src="HEALTH/Exercise.webp" alt="Fitness" loading="auto">
                     <figcaption>Fitness</figcaption>
                 </figure>
             </div>
@@ -587,22 +594,22 @@ footer {
                     <p>Achieving optimal health and fitness isn't just about physical activity and nutrition—it's also about nurturing your mental and emotional well-being. In this section, you'll find resources for managing stress, improving sleep quality, practicing mindfulness, and cultivating a positive mindset.</p>
                </div>
                 <div class="right">
-                     <img src="BLOG2.jpg" alt="Mind & Body">
+                     <img src="HEALTH/Exercise.webp" alt="Mind & Body" loading="auto">
                </div>
           </div>
     </section>
         
 		
      <section id="fruits">
-        <h2> some frutis that will be help you to maintain body fitness </h2>
+        <h2 style="padding:0px 0px 30px 0px; text-align:Center;"> some frutis that will be help you to maintain body fitness </h2>
            <div class="fruit-item">
-               <img src="apple.jpg" alt="apple">
+               <img src="HEALTH/apple.webp" alt="apple" loading="auto">
               
-               <img src="banana.jpg" alt="banana">
+               <img src="HEALTH/banana.webp" alt="banana" loading="auto">
 			   
-			   <img src="apple.jpg" alt="pineapple">
+			   <img src="HEALTH/orange.webp" alt="pineapple" loading="auto">
               
-               <img src="banana.jpg" alt="watermelon">
+               <img src="HEALTH/papaya.webp" alt="watermelon" loading="auto">
          </div>
            <!-- Add more fruit items as needed -->
      </section>
