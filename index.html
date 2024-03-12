@@ -268,6 +268,74 @@
             background:#6b1de0 ;           
           }
 		
+		
+		                       /*    .recommended-articles Section       */
+    .recommended-articles {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+        }
+     .recommended-articles > h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .recommended-pages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+
+    .page {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      display: block;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page img {
+      max-width: 100%;
+      aspect-ratio:1/0.80;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page-content {
+      padding: 15px 5px;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .page {
+        margin-bottom: 20px;
+      }
+    }
+
+	
+		
+		
+		
     Section > form {
 	    padding:20px 10px;
 		background:#f9f9f9;
@@ -287,18 +355,11 @@
            text-transform:capitalize;		   
 		}
 	Section	> form > .btn {
-        padding: 10px 20px;
-        background-color: #5E2BFF;
-        color: white;
-        width:60%;
-        margin:10px auto;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        -webkit-transition-duration:0.3s;
-             -o-transition-duration:0.3s;
-                transition-duration:0.3s;      
-         }
+             background:#5E2BFF;   
+			 margin:20px auto;
+			 color:#ffffff;
+			 width:60%;
+	   }
      Section > form > .btn:hover {
             background-color: #390bd4;
 			color:#ffffff;
@@ -347,6 +408,11 @@
 			             margin:0 auto;
 			             width:90%;
 	        	     }  
+					.recommended-pages {
+                           display: grid;
+                           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                           gap: 20px;
+                      }
 					 
       }
      @media only screen and (min-width:992px) {
@@ -375,9 +441,28 @@
         .navbar-toggler:hover {
 		       background: #ccc ;
 			   border-radius:50%;
-		    }							   
+		    }	
+         .page:hover {
+                 transform: translateY(-5px);
+            } 			
        }
 
+
+       @media(prefers-color-scheme:light) { 
+	             body {
+		 	     Background:#FFFFFF;
+				 color:#000000;
+			 }
+	  }
+     
+	  @media(prefers-color-scheme:dark) {
+	         body {
+			     Background:#000000;
+				 color:#FFFFFF;
+			 }
+	  } 
+	  
+	  
  </style>
 </head>
 <body>
@@ -449,7 +534,7 @@
 			   
 			   <section>
 			          <figure>
-                           <img src="INDEX/Lod2.webp" alt="krishna Quotes" loading="lazy">
+                           <img src="Lod2.webp" alt="krishna Quotes" loading="lazy">
                            <figcaption>  </figcaption>
                      </figure>
 					 
@@ -539,6 +624,94 @@
 			        
 			   </section>
 			   
+			    <!---------------------------------------------------------------
+				  -----------------OUR RECOMENDED PAGES SECTION------------------
+				  --------------------------------------------------------------->
+	 <section class="recommended-articles">             
+             <h1>  Recommended Pages  </h1>
+     <div class="recommended-pages">
+      <!-- Page 1 -->
+      <a class="page" href="books-poem-sonnet-poetry.html">
+        <img src="INDEX/poetry.webp" alt="Beauty of poetry">
+        <div class="page-content">
+          <h2>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </h2>
+        </div>
+      </a>
+	 
+      <!-- Page 3 -->
+      <a class="page" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html">
+        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat">
+        <div class="page-content">
+          <h2> Explore the Epics: Ramayana and Mahabharata Q&A </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 4 -->
+      <a class="page" href="best-online-mobile-games.html">
+        <img src="INDEX/banner.webp" alt="video games">
+        <div class="page-content">
+          <h2>  Best mobile games in India: discover the best Games, tips, and reviews  </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 5 -->
+      <a class="page" href="best-instant-free-paytm-cash-earning-apps.html">
+        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps">
+        <div class="page-content">
+          <h2>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 6 -->
+      <a class="page" href="best-free-movie-download-websites.html">
+        <img src="INDEX/movie.webp" alt="movie-download-websites">
+        <div class="page-content">
+          <h2> Download movies: best movie download websites in 2024  </h2>
+        </div>
+      </a>
+	 <!-- Page 8 -->
+      <a class="page" href="best-education-websites-india.html">
+        <img src="INDEX/education.webp" alt="best-education-websites-india">
+        <div class="page-content">
+          <h2>  Explore the Top Education Websites in India | Best Resources for Learning  </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 9 -->
+      <a class="page" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html">
+        <img src="INDEX/loot.webp" alt="amazon shoping">
+        <div class="page-content">
+          <h2> Discover Unbeatable Deals: Your One-Stop Shop for All Your Shopping Needs! </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 10-->
+      <a class="page" href="health-tips-10-ways-to-stay-healthy.html">
+        <img src="INDEX/health.webp" alt="Health advices">
+        <div class="page-content">
+          <h2>  Unlock Your Wellness: Expert Health Tips and Advice for a Healthier You  </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 11 -->
+      <a class="page" href="cyber-security-what-is-cybersecurity.html">
+        <img src="INDEX/CYBER1.webp" alt="CYBER Security">
+        <div class="page-content">
+          <h2>  SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions  </h2>
+        </div>
+      </a>
+	  
+      <!-- Page 12-->
+      <a class="page" href="blogs-blog-videos.html">
+        <img src="INDEX/BLOG2.webp" alt="VIDEO Blogs">
+        <div class="page-content">
+          <h2> Explore Engaging Video Blogs: Your Destination for Informative Content  </h2>
+        </div>
+      </a>
+    </div>
+    <!-- You can add more articles using the same structure -->
+			   </section>
+			   
 			   
 			   <!-----------------------------------------------------------
 				  ---------------------LEAVE A COMMENTS SECTION---------------------
@@ -558,20 +731,13 @@
                          <input type="email" id="email" name="email" placeholder="Email" spellcheck="true" required>
                 
 				         <label for ="text"> Message </label>
-				         <textarea id="msg" name="msg" rows="6" cols="40" placeholder="Your Comment*" spellcheck="true" required></textarea>
+				         <textarea id="msg" name="msg" rows="7" cols="40" placeholder="Your Comment*" spellcheck="true" required></textarea>
                  
                          <button class="btn" type="submit"> Submit </button>
 				
 					 </form>
-			   </section>
-			   
-			   
-			   <!---------------------------------------------------------------
-				  -----------------OUR RECOMENDED PAGES SECTION------------------
-				  --------------------------------------------------------------->
-			   <section>
-			        
-			   </section>
+			   </section>			   			   
+			  
 		 <main>
 		 
 		 <!-----------------------------------
