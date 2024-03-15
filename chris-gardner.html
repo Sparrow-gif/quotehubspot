@@ -60,6 +60,34 @@
 			margin:6px;
 			display:inline-block;
 		}
+		
+		.tainer {
+              position: fixed;
+              bottom: 20px;
+              right: 2%;
+              text-align: center;
+        }
+
+ .timer {
+         font-size:24px;
+         color: #333;
+         height:80px;
+         width:80px;
+         background:dodgerblue;
+         line-height:80px;
+         color:#ffffff;
+         border-radius:75% 25% 70% 30% / 48% 54% 46% 52%  ;
+      }
+
+    .message {
+         font-size: 24px;
+         color: green;
+         margin-top: 10px;
+         display: none;
+     }
+
+
+
         @media (max-width: 768px) {
             main {
                 padding: 10px;
@@ -149,5 +177,43 @@
             <a href="my-sitemap.html" target="_self">  Sitemap  </a>
         </nav>
     </footer>
+	
+	<!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+	 <div class="tainer">
+        <div class="timer" id="timer">02:00</div>
+        <div class="message" id="message"></div>
+    </div>
+	
+	  <script>
+	        document.addEventListener("DOMContentLoaded", function() {
+  var timerDisplay = document.getElementById('timer');
+  var messageDisplay = document.getElementById('message');
+
+  var totalTime = 120; // 2 minutes
+  var timeLeft = totalTime;
+  var timerInterval;
+
+  function formatTime(seconds) {
+    var minutes = Math.floor(seconds / 60);
+    var remainingSeconds = seconds % 60;
+    return (minutes < 10 ? '0' : '') + minutes + ':' + (remainingSeconds < 10 ? '0' : '') + remainingSeconds;
+  }
+
+  function updateTimer() {
+    timerDisplay.innerHTML = formatTime(timeLeft);
+    if (timeLeft === 0) {
+      clearInterval(timerInterval);
+      messageDisplay.innerHTML = "Read successfully!";
+      messageDisplay.style.display = 'block';
+    }
+    timeLeft--;
+  }
+
+  timerInterval = setInterval(updateTimer, 1000);
+});
+
+	  </script>
 </body>
 </html>
