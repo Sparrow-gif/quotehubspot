@@ -110,18 +110,20 @@ button:hover {
             touch with us. We are ready to assist
             you with help bring your vision to life. </p>
 			<br/> <br/>
-        <form class="contactForm" id="myForm">
-           <label> Name </label>
-          <input type="text" id="name" name="name" placeholder="Name" spellcheck="true" required>
-		  
-		  <label> email </label>
-          <input type="email" id="email" name="email" placeholder="Email" spellcheck="true" required>
-		  
-		  <label> message </label>
-          <textarea id="msg" name="msg" placeholder="message" placeholder="message" rows="6" spellcheck="true" required></textarea>
-		  
-          <button type="submit"> Submit </button>
-      </form>
+         <form action="#" method="post" id="myForm" autocomplete="on">
+					        
+			 <label for ="name"> Name </label>
+             <input type="text" id="name" name="name" placeholder="Name" spellcheck="true" autocomplete="given-name" required>
+                
+		     <label for ="email"> Email </label>
+             <input type="email" id="email" name="email" placeholder="Email" spellcheck="true" autocomplete="off" required>
+                
+		     <label for ="msg"> Message </label>
+		     <textarea id="msg" name="msg" rows="7" cols="40" placeholder="Your Comment*" spellcheck="true" required></textarea>
+                 
+             <button class="btn" type="submit"> Submit </button>
+				
+		 </form>
     </div>
 	
     <script>
