@@ -227,12 +227,7 @@
    
    
     #contentable {
-          margin:0 auto ;
-          -webkit-user-select:none;    
-         -moz-user-select:none;    
-         -ms-user-select:none;    
-          user-select:none;  
-          max-width:100% ;
+         
         }
    #contentable > h2 {         
            padding:20px 0px;
@@ -270,7 +265,8 @@
                grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
                gap: 20px;
      	    }
-	.garena > article {	      
+	.garena > article {	  
+            background:#fff;    
             padding:10px; 			
             min-width:100%;
             max-width:420px;
@@ -423,8 +419,27 @@
 			       max-width:65%;
                    min-width:990px;
 		      } 
-
-			  
+               .menu li a:hover {
+                          background-color: #6b40f7;
+                          color: white;
+                       }
+                 .social-links a:hover {
+                           color: #fff;
+                           background-color: #5E2BFF;
+                          -webkit-transform: translateY(-5px);
+                          -ms-transform: translateY(-5px);
+                              transform: translateY(-5px);
+                       }	
+         .scroll-container > .scroll-item:hover {
+                 color: black;
+                 background: #f0f0f0 ;
+		         border:none;
+		     }		
+        .navbar-toggler:hover {
+		       background: #ccc ;
+			   border-radius:50%;
+		    }	
+	}		  
 	</style>
  </head>	
  <body>	
@@ -531,52 +546,52 @@
                        <tr>      <!-------site 01------->
                           <td> 01 </td>
                           <td> BYJU'S </td>
-                          <td> <a href="#website1"> Go To </a></td>
+                          <td> <a href="#BYJU'S"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 02------->
                           <td> 02 </td>
                           <td> Khan Academy </td>
-                          <td> <a href="#website2"> Go To </a></td>
+                          <td> <a href="#Khan Academy"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 03------->
                           <td> 03 </td>
                           <td> Coursera </td>
-                          <td> <a href="#website3"> Go To </a></td>
+                          <td> <a href="#Coursera"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 04------->
                           <td> 04 </td>
                           <td> Udemy </td>
-                          <td> <a href="#website4"> Go To </a></td>
+                          <td> <a href="#Udemy"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 05------->
                           <td> 05 </td>
                           <td> Meritnation </td>
-                          <td> <a href="#website5"> Go To </a></td>
+                          <td> <a href="#Meritnation"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 06------->
                           <td> 06 </td>
                           <td> Vedantu </td>
-                          <td> <a href="#website6"> Go To </a></td>
+                          <td> <a href="#Vedantu"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 07------->
                           <td> 07 </td>
                           <td> Toppr </td>
-                          <td> <a href="#website7"> Go To </a></td>
+                          <td> <a href="#Toppr"> Go To </a></td>
 		              </tr>
                        <tr>      <!-------site 08------->
                           <td> 08 </td>
                           <td> Simplilearn </td>
-                          <td> <a href="#website8"> Go To </a></td>
+                          <td> <a href="#Simplilearn"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 09------->
                           <td> 09 </td>
                           <td> Unacademy </td>
-                          <td> <a href="#website9"> Go To </a></td>
+                          <td> <a href="#Unacademy"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 10------->
                           <td> 10 </td>
                           <td> Educomp Solutions </td>
-                          <td> <a href="#website10"> Go To </a></td>
+                          <td> <a href="#Educomp Solutions"> Go To </a></td>
                       </tr>
                 </table>
               </section>
@@ -585,10 +600,10 @@
 			   ----------------MAIN CONTENT SECTION----------------
 			   ---------------------------------------------------->
 			  <Section class="garena">
-			         <article> <!----------education website 1------------->
+			         <article id="BYJU'S" title="BYJU'S"> <!----------education website 1------------->
 					           <h2> 1) BYJU'S </h2>
 							   <figure>
-							          <img src="EDU/Byjus.webp" alt="best educational resources">
+							          <img src="EDU/Byjus.webp" alt="BYJU'S">
 							   </figure>
 							   <p>
                                   While BYJU'S is a popular online learning platform with a comprehensive approach to education,
@@ -600,10 +615,10 @@
 							   <a href="https://byjus.com/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 2------------->
+					 <article id="Khan Academy" title="Khan Academy"> <!----------education website 2------------->
 					           <h2> 2) Khan Academy </h2>
 							   <figure>
-							          <img src="EDU/khan.webp" alt="top e-learning websites">
+							          <img src="EDU/khan.webp" alt="Khan Academy">
 							   </figure>
 							   <p>
                                   Students use Khan Academy because it helps them learn in an easy and understandable way. It has videos 
@@ -615,10 +630,10 @@
 							   <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 3------------->
+					 <article id="Coursera" title="Coursera"> <!----------education website 3------------->
 					           <h2> 3) Coursera </h2>
 							   <figure>
-							          <img src="EDU/coursera.webp" alt="education">
+							          <img src="EDU/coursera.webp" alt="Coursera">
 							   </figure>
 							   <p>
                                   Coursera is indeed one of the most popular online education platforms. It offers a wide range of courses,
@@ -631,10 +646,10 @@
 							   <a href="https://www.coursera.org" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 4------------->
+					 <article id="Udemy" title="Udemy"> <!----------education website 4------------->
 					           <h2> 4) Udemy </h2>
 							   <figure>
-							          <img src="EDU/udemy.webp" alt="best educational resources">
+							          <img src="EDU/udemy.webp" alt="Udemy">
 							   </figure>
 							   <p>
                                   Udemy is indeed one of the most popular online education platforms globally. It offers a vast array of courses 
@@ -647,10 +662,10 @@
 							   <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 5------------->
+					 <article id="Meritnation" title="Meritnation"> <!----------education website 5------------->
 					           <h2> 5) Meritnation </h2>
 							   <figure>
-							          <img src="EDU/maritnation.webp" alt="education">
+							          <img src="EDU/maritnation.webp" alt="Meritnation">
 							   </figure>
 							   <p>
                                   Students may find Meritnation appealing for various reasons. The platform offers a broad array 
@@ -667,10 +682,10 @@
 							   <a href="https://www.meritnation.com/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 6------------->
+					 <article id="Vedantu" title="Vedantu"> <!----------education website 6------------->
 					           <h2> 6) Vedantu </h2>
 							   <figure>
-							          <img src="EDU/vedantu.webp" alt="top e-learning websites">
+							          <img src="EDU/vedantu.webp" alt="Vedantu">
 							   </figure>
 							   <p>
                                   Vedantu is indeed a popular online education platform based in India. It offers live 
@@ -684,10 +699,10 @@
 							   <a href="https://www.vedantu.com/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 7------------->
+					 <article id="Toppr" title="Toppr"> <!----------education website 7------------->
 					           <h2> 7) Toppr </h2>
 							   <figure>
-							          <img src="EDU/toppr.webp" alt="academic websites India">
+							          <img src="EDU/toppr.webp" alt="Toppr">
 							   </figure>
 							   <p>
                                   Toppr is indeed a popular education platform that offers personalized learning solutions for 
@@ -702,10 +717,10 @@
 							   <a href="https://www.toppr.com/ask/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 8------------->
+					 <article id="Simplilearn" title="Simplilearn"> <!----------education website 8------------->
 					           <h2> 8) Simplilearn </h2>
 							   <figure>
-							          <img src="EDU/simplilearn.webp" alt="education">
+							          <img src="EDU/simplilearn.webp" alt="Simplilearn">
 							   </figure>
 							   <p>
                                   Simplilearn is indeed a popular online education platform that offers a wide range of courses in various fields 
@@ -717,10 +732,10 @@
 							   <a href="https://www.simplilearn.com/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 9------------->
+					 <article id="Unacademy" title="Unacademy"> <!----------education website 9------------->
 					           <h2> 9) Unacademy </h2>
 							   <figure>
-							          <img src="EDU/unacademy.webp" alt="academic websites India">
+							          <img src="EDU/unacademy.webp" alt="Unacademy">
 							   </figure>
 							   <p>
                                   "Unacademy: Your Ultimate Learning Companion"
@@ -732,10 +747,10 @@
 							   <a href="https://unacademy.com/" target="_blank" rel="noopener noreferrer"> Go To Official page </a>
 					 </article>
 					 
-					 <article> <!----------education website 10------------->
+					 <article id="Educomp Solutions" title="Educomp Solutions"> <!----------education website 10------------->
 					           <h2> 10) Educomp Solutions </h2>
 							   <figure>
-							          <img src="EDU/educamp.webp" alt="education">
+							          <img src="EDU/educamp.webp" alt="Educomp Solutions">
 							   </figure>
 							   <p>
                                   "Educomp Solutions: Your Ultimate Education Companion"
