@@ -326,7 +326,7 @@ h2 {
 	}
 	
 	
-   .quiz-container {
+    .quiz-container {
          max-width: 600px;
          margin: 0 auto;
          background-color: #fff;
@@ -684,7 +684,7 @@ h2 {
 		   <!------------------------------------------------------------------------
 		    -----------------------------QUIZ SECTION---------------------------------
 		    -------------------------------------------------------------------------->
-	 <div class="quiz-container">
+    <div class="quiz-container">
          <h2>Motivation Quiz</h2>
          <div id="question"></div>
          <div id="options"></div>
@@ -851,12 +851,15 @@ function showQuestion() {
     input.type = 'radio';
     input.name = 'option';
     input.value = option;
-    optionsElement.appendChild(input);
+    const id = 'option' + option.toLowerCase().replace(/\s/g, ''); // Generating unique IDs
+    input.id = id;
 
     const label = document.createElement('label');
     label.textContent = option;
-    optionsElement.appendChild(label);
+    label.htmlFor = id;
 
+    optionsElement.appendChild(input);
+    optionsElement.appendChild(label);
     optionsElement.appendChild(document.createElement('br'));
   });
 }
