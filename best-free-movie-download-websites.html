@@ -12,7 +12,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
     <style>
-      * {
+        /* Basic styles */
+   * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
@@ -22,16 +23,20 @@
        }  
    h1 { font-size:24px; color:#333;}
    h2 { font-size:22px;}
-    p { font-size:15px;}	    
+   p  { font-size:15px;}	  
+   h3 { font-size:19px;}
    body.sidebar-open {  overflow: hidden; }
-	 html {   
-	     scroll-behavior:smooth;
-             scroll-padding:3em;
+   
+	  html {  
+         scroll-behavior:smooth;
+         scroll-padding:3.50em;	  
    	     background-color: ; 
 		 -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 		         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
-   header {
+	section { padding:20px 20px;}	
+   
+      header {
             position:fixed;
             top: 0;
             left: 0;
@@ -39,24 +44,18 @@
             z-index: 999;
         }
         #navbar {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex; 
-            -webkit-box-pack: justify; 
-                -ms-flex-pack: justify; 
-                    justify-content: space-between; 
-            -webkit-box-align: center; 
-                -ms-flex-align: center; 
-                    align-items: center; 
+            justify-content: space-between; 
+            align-items: center; 
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
 			padding:5px 10px;
         }
-        .navbar-brand h1 {
+        .navbar-brand h2 {
                  margin: 0;
                  color:#5E2BFF;
-	 }
+		 }
         
         .navbar-toggler {
             background: none;
@@ -64,7 +63,7 @@
             cursor: pointer;
             font-size:28px;
             padding:6px;
-	   }
+      }
        
         .sidebar {
             height: calc(100vh - 40px);
@@ -75,8 +74,6 @@
             background-color: #fff;
             overflow-y: auto;
             padding-top: 20px; /* Adjusted padding top */
-            -webkit-transition: 0.5s;
-            -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
             padding:10px 0px 20px 0px;
@@ -102,8 +99,6 @@
             margin:10px 10px;
             text-decoration: none;
             color: black;
-            -webkit-transition: background-color 0.3s;
-            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 30px;
             text-align: center; /* Center align the text */
@@ -115,12 +110,8 @@
         
         .social-links {
             margin-top: 20px;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            justify-content: center;
             padding: 0;
         }
         
@@ -128,21 +119,11 @@
             margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
-            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
-            transition: color 0.3s, -webkit-transform 0.3s;
-            -o-transition: transform 0.3s, color 0.3s;
             transition: transform 0.3s, color 0.3s;
-            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
             border-radius: 50%;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            justify-content: center;
+            align-items: center;
             width: 40px;
             height: 40px;
         }
@@ -177,15 +158,12 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		-webkit-box-pack: ;        
-		    -ms-flex-pack: ;        
-		        justify-content: ;
+		justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-		-ms-scroll-snap-type: x mandatory;
-		    scroll-snap-type: x mandatory;
+		scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -220,17 +198,32 @@
            }
 		   
 		   
-		 
-  .responsive {
-	    width: 100%;
-        max-width: 620px;
-        height: auto;
-		display: block;
-        margin-left: auto;
-        margin-right: auto;
+	 
+     .share-btn {
+        display: inline-block;
+        padding:8px 10px;
+        margin: 4px 0px;
+        background-color: #3d5998;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+		font-size:13px;
+      }
+   .moviebanner {
+	     display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
 	}
-	  
-	   #seen {
+   .moviebanner img {
+       max-width: 100%;
+       height: auto;
+       border-radius: 8px;
+   }
+
+    #seen {
 	       overflow-x:auto;
 		   overflow-y:hidden;
 		   background:;
@@ -249,33 +242,31 @@
 		     -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 		             box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 	      }
-	 
-	  
+   
+   
     #contentable {
-          margin:0 auto ;
-          padding:0px;
-         -webkit-user-select:none;    
-         -moz-user-select:none;    
-         -ms-user-select:none;    
-         user-select:none;  
-         width:100%;
+         
         }
-  #contentable > table {
-          border-collapse: collapse;
-         border-radius: 10px;
-         min-width:100% ;
-		 max-width:560px;
-         margin:20px auto;
-         text-align:center;
+   #contentable > h2 {         
+           padding:20px 0px;
+		   font-size:24px;
+        }
+   #contentable > table {
+         border-collapse: collapse;
 		 border:2px solid #f0f0f0;
-      }
+         border-radius: 10px;
+         width:100%;
+         margin:0px auto;
+         text-align:center;
+         background-color: #ffffff;
+        }
   table > tr, th, td {
-         padding: 15px 20px;
+         padding: 15px 0px;
          text-align: center;
          border-bottom: 1px solid #ededed;
        }
      th {
-        background-color: ;
+        background-color: #f8f9fa;
     }
 
     tr:last-child td {
@@ -284,90 +275,40 @@
 
     tr:nth-child(even) {
         background-color: #f8f9fa;
-    }
+   }
+	
 
-
+    	.sunnyleone {
+	           display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+               gap: 20px;
+     	    }
+	.sunnyleone > article {	  
+            background: #f8f9fa;   
+            padding:15px 10px; 			
+            min-width:100%;
+            max-width:420px;
+         }
+	.sunnyleone > article > a {
+	        padding:10px 15px;
+            border:none;
+            background: #5e2bff;
+            border-radius:5px;
+            cursor:pointer ;           
+			text-decoration:none;
+			color:#fff;
+	}
 	
 	
 	
-	
-     #container {
-	         gap:10px;
-             display:-ms-grid;
-             display:grid;
-             grid-template-columns:repeat(auto-fit,minmax(min(29rem,100%),1fr)) ;
-            -webkit-user-select:none;    
-            -moz-user-select:none;    
-            -ms-user-select:none;    
-             user-select:none;  
-             background: ;
-             margin:10px auto ;
-             width:100%;   
-          }
-     #container > figure {
-            height:auto ;    
-            padding:5px;     
-            margin:10px auto ;
-			border-radius:6px;
-            width:100%;
-      -webkit-user-select:none;    
-         -moz-user-select:none;    
-         -ms-user-select:none;    
-         user-select:none;  
-         background: #f8f9fa;
-		 }
-     
-     #container > figure > h2 {
-           text-indent:0px;
-           padding:5px 0px 3px 0px;
-           color: #5E2BFF;
-		   font-size:;
-       }
-    
-      #container > figure > img {
-	              min-width:100%;
-				  max-width:70%;
-	              aspect-ratio:1/0.65;
-                  margin:0 auto;    
-                  background-size:cover;
-                  background-position:center;
-			   -o-object-fit:fill;
-			      object-fit:fill;
-        }
-     #container > figure > p {
-           font-size:1rem;
-           padding:10px;
-          }
-     #container > figure > .page {
-           padding:10px;
-           border:none;
-           background: #5e2bff;
-           border-radius:5px;
-           cursor:pointer ;
-          -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
-        }
-     .page > a {
-           text-decoration:none;
-           color:white ;
-        }
-
-      aside {
-           padding:10px;
-           overflow: hidden;
-           -webkit-user-select:none;
-              -moz-user-select:none;
-               -ms-user-select:none;
-                   user-select:none;
-        }
-    aside > #howvdo {
+	#howvdo {
          margin:0 auto;
          gap:10px;
          display:-ms-grid;
          display:grid;
          grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr)) ;               
         }
-    aside > #howvdo > video {
+	#howvdo > video {
            margin:10px auto;
            width:100%;
            min-height:220px;
@@ -377,16 +318,16 @@
            -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
          }
-
-
-   .reqcontainer {
+		 
+		 
+    .container {
          max-width: 100%;
          margin: 20px auto;
          padding: 20px;
          background-color: #fff;
       }
 
-   .reqcontainer > h1 {
+   .container > h2 {
       text-align: center;
       margin-bottom: 30px;
       color: #333;
@@ -398,7 +339,7 @@
       gap: 20px;
     }
 
-   .recommended-pages > .page {
+    .page {
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -414,8 +355,8 @@
     }
 
     .page img {
-      max-width: 100%;
-      aspect-ratio:1/0.70;
+      width: 100%;
+      aspect-ratio:1.69/1;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
 	  object-fit:fill;
@@ -427,11 +368,6 @@
       padding: 15px 5px;
     }
 
-    .page h2 {
-      margin-top: 0;
-      font-size: 16px;
-    }
-
     @media screen and (max-width: 600px) {
       .container {
         padding: 10px;
@@ -441,49 +377,9 @@
         margin-bottom: 20px;
       }
     }
-
-
-
-   footer {
-           background: #f0f0f0;
-            text-align: center;
-            color: #181f1a;
-            padding: 20px;
-        }
-       footer > nav > a {
-	         text-decoration:none;
-			 border-left:2px solid coral;
-			 margin:20px 10px;
-			 padding:6px 10px;
-			 -webkit-column-count:auto;
-			    -moz-column-count:auto;
-			         column-count:auto;
-			 color: #181f1a;
-			 font-size:14px;
-			}		
-		
-		 footer > .social-media > a {
-		      		 text-decoration:none;
-		             color: #181f1a;
-			         margin: 10px;
-                     Font-size:1.50rem;  
-		 }
-   #topButton {
-          display: none;
-          position: fixed;
-          bottom: 2%;
-          right: 6px;
-          color: #fff;
-          background: #5E2BFF; /*#16df7e; */
-          width: 40px;
-          height: 40px;
-          border-radius: 4px;
-          z-index:1 ;
-		  border:none;
-		  font-size: 24px;
-        }
- 
-    #gettouch {
+	
+	
+	#gettouch {
           margin:0 auto ;
           padding:20px;    
           background: ;    
@@ -493,12 +389,8 @@
          text-transform: capitalize ;    
        }
   #gettouch > form {
-        -webkit-user-select:none;
-           -moz-user-select:none;
-            -ms-user-select:none;
-                user-select:none;
         margin:0 auto ;
-        max-width:580px;
+        max-width:480px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -572,54 +464,72 @@
           max-height:auto;
           overflow:;
        }
-
-   
-  
-  
- @media only screen and (min-width: 500px) {
-                                                        /* Styles for small screens here */
-               .recommended-pages {
+	 
+	 
+	 footer {
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
+        }
+       footer > nav > a {
+	         Display:inline-block;
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin: 6px;
+			 padding:4px;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color: #181f1a;
+			         margin: 10px;
+                     Font-size:1.50rem;  
+		 }
+	
+ @media screen and (min-width: 600px) {
+      .moviebanner img {
+          max-width: 590px;
+      }
+	  .recommended-pages {
                            display: grid;
-                           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                           grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
                            gap: 20px;
                       }
+ }	  
+ 
+    @media only screen and (max-width:767px) { 
 	  
-    @media only screen and (min-width: 768px) {
+	  }
+	  
+	  
+   @media only screen and (min-width:768px) { 
 	         html {
-				   margin:0 auto;
-				   width:90%;
-				 }
-          
-		
-			 .article {  margin:0 auto;   width: 260px ; }
-		   
-        }
-	
-	
-      @media only screen and (min-width: 992px) {
-            html {
-	          margin:0 auto;
-			  max-width:65%;
-			  min-width:990px;
-		    }   
-			
-		 .head-logo > a:hover{ 
-		            -webkit-transform:scale(1.20);
-					-ms-transform:scale(1.20);
-					transform:scale(1.20);
-					}
-  
-         .menu li a:hover {
-              background-color: #6b40f7;
-              color: white;
-            }	
-          .social-links a:hover {
-                 color: #fff;
-                 background-color: #5E2BFF;
-                 -webkit-transform: translateY(-5px);
-                     -ms-transform: translateY(-5px);
-                         transform: translateY(-5px);
-           }	
+	           margin:0 auto;
+		       width:90%;
+			   }
+			    
+     }
+   
+   @media only screen and (min-width:992px) { 
+	           html {
+	               margin:0 auto;
+			       max-width:65%;
+                   min-width:990px;
+		      } 
+               .menu li a:hover {
+                          background-color: #6b40f7;
+                          color: white;
+                       }
+                 .social-links a:hover {
+                           color: #fff;
+                           background-color: #5E2BFF;
+                          -webkit-transform: translateY(-5px);
+                          -ms-transform: translateY(-5px);
+                              transform: translateY(-5px);
+                       }	
          .scroll-container > .scroll-item:hover {
                  color: black;
                  background: #f0f0f0 ;
@@ -628,31 +538,20 @@
         .navbar-toggler:hover {
 		       background: #ccc ;
 			   border-radius:50%;
-		    }		
-	.article:hover{
-	     -webkit-transform:scale(1.04);
-	         -ms-transform:scale(1.04);
-	             transform:scale(1.04);
-	    }
-	 
-	   tr:hover {
-            background-color: #e9ecef;
-      }
-		
-		
-		
-    }
-   </style>
-  </head>
-  <body oncontextmenu="return false">
-       <header id="header">
-    <nav id="navbar">
-        <div class="navbar-brand">
-            <h1> Quotehubspot </h1>
-        </div>
-        <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
+		    }	
+	}		  
+	</style>
+ </head>	
+ <body>	
+ 
+      <header id="header">
+         <nav id="navbar">
+             <div class="navbar-brand">
+                   <h2>  Quotehubspot  </h2>
+           </div>
+           <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
     </nav>
-    <aside id="sidebar" class="sidebar">
+    <nav id="sidebar" class="sidebar">
          <ul class="menu">
              <li><a href="index.html" title="Go to Home"> Home </a></li>
              <li><a href="about-us.html" title="Learn about us">  About us  </a></li>
@@ -673,79 +572,83 @@
             <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>
         </div>
-    </aside>
+    </nav>
 </header>
 
-	   <!-- Overlay to cover content behind sidebar -->
-          <div id="overlay"></div>
-	  
+      <!-- Overlay to cover content behind sidebar -->
+      <div id="overlay"></div>
+
          <nav class="scroll-container" title="scroll-ber">
-               <a class="scroll-item" href="inspiration-motivation-positive-quotes.html" target="_self"> Daily Quotes </a>     
+               <a class="scroll-item" href="inspiration-motivation-positive-quotes.html" target="_self"> Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
                <a class="scroll-item" href="blogs-blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
-               <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
+               <a class="scroll-item" href="best-educational-websites-india.html" target="_self"> study </a>
                <a class="scroll-item" href="best-online-mobile-games.html" target="_self"> gaming </a>
                <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
                <a class="scroll-item" id="active" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
                <a class="scroll-item" href="health-tips-10-ways-to-stay-healthy.html" target="_self"> health </a>
-		       <!-- Add more items as needed -->
+	           <!-- Add more items as needed -->
        </nav>  
-          
-                 
-           <!-----Main Body------>
-          <main style="padding:15px;">             <!-------heading------->               
-                  <h1 style=" "> best movie download websites for free in 2024 </h1>
-		          <div class="heading">
-         				<p> Updated on :<time> jan 06, 2024 </time>
-						    <i class="fa fa-eye" style="font-size:16px; color:#181f1a; margin:0px 8px;"> 122 </i> 
-							<i class="fa fa-reply" style="font-size:16px; color:#181f1a; margin:0px 8px;"> 31 </i>
+	   
+	   
+	 
+        <main>
+		      <section>
+			          <h1> Best Movie Download Websites For Free In 2024 </h1>
+					  <p> Updated On :<time> Jan 08, 2024 </time> 					 
+ 					      <i class="fa fa-eye" style="font-size:16px; color:#181f1a; margin:0px 8px;"> 122 </i> 
+					      <i class="fa fa-reply" style="font-size:16px; color:#181f1a; margin:0px 8px;"> 31 </i>
 					  </p>
-			    </div>
-                            
-							<!-------main div------->
-                <div class="contest">
-                    <img src="MOVIE/BANNER.webp" alt="movies banner" class="responsive" loading="auto"> <!-------headind banner------->
-                    <p class="texts" style="font-size:15px; padding:15px 0px;">  
-                        Are you searching for the best free movie download websites to satisfy
- 						your cinematic cravings without breaking the bank? Look no further! Our 
-						comprehensive guide has everything you need to know about the top platforms 
-						offering a plethora of movies for you to stream and download absolutely free. 
-					    Let's jump into the world of boundless excitement!
-                   </p>							 
-                </div>
-
-    <!----- <article>
-		       <h2> Why Choose Free Movie Download Websites? </h2>
-			   <p> In today's digital age, entertainment should be accessible to all. Free movie download 
-			       websites offer unparalleled access to a wide range of films without the burden of subscription 
-				   fees or rental costs. Whether you're a casual moviegoer or a dedicated cinephile, these 
-				   platforms cater to all tastes and preferences. With an extensive library of titles spanning
-				   various genres, eras, and cultures, there's something for everyone to enjoy. Plus, by 
-				   adhering to legal guidelines and supporting legitimate sources, you can indulge in guilt-free
-				   movie-watching experiences.  
-			  </p>
-		 </article>--------->
-
-
-                 <!-------------NEW RELESES MOVIES----------------------------->
-                        <h1 id="latest" style="color:#202a57;"> Letest release movies </h1>
-      <article id="seen">
-           <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 1-------->
-		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 2-------->
-		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 3-------->
-		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 4-------->
-		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 5-------->
-		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 6-------->
-      </article>
-
-
-
-
-                 <!------content table-------->
+					  <!-- HTML structure for buttons -->
+                        <button class="share-btn" id="whatsappBtn">Share on WhatsApp</button>
+                        <button class="share-btn" id="facebookBtn">Share on Facebook</button>
+			  </section>
+			  
+			  
+			  <section class="moviebanner">
+			         <figure>
+                          <img src="MOVIE/BANNER.webp" alt="bollywood movies" loading="lazy" width="800" height="533">
+                          <figcaption>  </figcaption>
+                    </figure>
+					 <article>
+					       <p> Are You Searching For The Best Free Movie Download Websites To Satisfy Your Cinematic Cravings Without Breaking The Bank? 
+						       Look No Further! Our Comprehensive Guide Has Everything You Need To Know About The Top Platforms Offering A Plethora Of 
+							   Movies For You To Stream And Download Absolutely Free. Let's Jump Into The World Of Boundless Excitement!
+						  </p>
+					 </article>
+					 
+					 <article>
+		                    <h2> Why Choose Free Movie Download Websites? </h2>
+			                <p> In today's digital age, entertainment should be accessible to all. Free movie download 
+			                    websites offer unparalleled access to a wide range of films without the burden of subscription 
+				                fees or rental costs. Whether you're a casual moviegoer or a dedicated cinephile, these 
+				                platforms cater to all tastes and preferences. With an extensive library of titles spanning
+				                various genres, eras, and cultures, there's something for everyone to enjoy. Plus, by 
+				                adhering to legal guidelines and supporting legitimate sources, you can indulge in guilt-free
+				                movie-watching experiences.  
+			               </p>
+		          </article>		
+			 </section>
+			  
+		<Section>
+		  <h1> Letest Release Movies in 2024 </h1>
+	      <article id="seen">
+                 <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 1-------->
+		         <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 2-------->
+		         <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 3-------->
+		         <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 4-------->
+		         <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 5-------->
+		         <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 6-------->
+          </article>
+	   </Section>
+	  
+			    <!---------------------------------------------------
+				--------------------content table--------------------
+				---------------------------------------------------->
                <section id="contentable">
-                     <h1> Here The List of top Movie Download Websites in 2024 </h1>  
+                     <h2> Here The List of top education Websites in india </h2>  
                     <table>
                        <tr> 
                           <th scope="col" role="columnheader"> sl. no </th>
@@ -755,219 +658,236 @@
                        <tr>      <!-------site 01------->
                           <td> 01 </td>
                           <td> Bollyflix </td>
-                          <td> <a href="#website1"> Go To </a></td>
+                          <td> <a href="#Bollyflix"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 02------->
                           <td> 02 </td>
                           <td> hdhub4u </td>
-                          <td> <a href="#website2"> Go To </a></td>
+                          <td> <a href="#Hdhub4u"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 03------->
                           <td> 03 </td>
                           <td> allmovieshub </td>
-                          <td> <a href="#website3"> Go To </a></td>
+                          <td> <a href="#Allmovieshub"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 04------->
                           <td> 04 </td>
                           <td> themoviesflix </td>
-                          <td> <a href="#website4"> Go To </a></td>
+                          <td> <a href="#Themoviesflix"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 05------->
                           <td> 05 </td>
                           <td> moviesmod </td>
-                          <td> <a href="#website5"> Go To </a></td>
+                          <td> <a href="#Moviesmod"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 06------->
                           <td> 06 </td>
                           <td>  bolly4u </td>
-                          <td> <a href="#website6"> Go To </a></td>
+                          <td> <a href="#Bolly4u"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 07------->
                           <td> 07 </td>
                           <td> Vegamovies </td>
-                          <td> <a href="#website7"> Go To </a></td>
+                          <td> <a href="#Vegamovies"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 08------->
                           <td> 08 </td>
                           <td> movies4u </td>
-                          <td> <a href="#website8"> Go To </a></td>
+                          <td> <a href="#Movies4u"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 09------->
                           <td> 09 </td>
                           <td> 9xflix </td>
-                          <td> <a href="#website9"> Go To </a></td>
+                          <td> <a href="#9xflix"> Go To </a></td>
                       </tr>
                        <tr>      <!-------site 10------->
                           <td> 10 </td>
                           <td> dotmovies </td>
-                          <td> <a href="#website10"> Go To </a></td>
+                          <td> <a href="#Dotmovies"> Go To </a></td>
                       </tr>
                 </table>
               </section>
-                
-                
-  <div id="container">        
-       <figure id="website1">
-		      <h2> 1) Bollyflix </h2>
-			  <img src="MOVIE/IMG1.webp" alt="bollyflix" loading="auto">
-              <p> 
-                 Bollyflix is a well-known online platform recognized for offering a wide array of
-                 movies, TV shows, and web series for downloading or streaming. It's popular for its 
-                 extensive collection spanning various genres and languages, catering to diverse
-                 audience preferences. Bollyflix has gained traction for its user-friendly 
-                 interface and accessibility, making it a go-to destination for individuals 
-                 seeking entertainment options.
-             </p>
-             <button class="page"> <a href="https://bollyflix.bet/"> Go To Official page </a></button> 
-	  </figure>
-     
+			  
+			  
+			  
+			    <!-------------------------------------------------
+			   ----------------MAIN CONTENT SECTION----------------
+			   ---------------------------------------------------->
+       <Section class="sunnyleone">
+			  <article id="Bollyflix" title="Bollyflix">   <!-------------Bollyflix--------------->
+			          <h2> 1) Bollyflix </h2>
+					  <figure>
+					       <img src="MOVIE/IMG1.webp" alt="Bollyflix" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      Bollyflix Is A Well-Known Online Platform Recognized For Offering A Wide Array Of Movies, 
+						  TV Shows, And Web Series For Downloading Or Streaming. It's Popular For Its Extensive Collection 
+						  Spanning Various Genres And Languages, Catering To Diverse Audience Preferences. Bollyflix Has
+						  Gained Traction For Its User-Friendly Interface And Accessibility, Making It A Go-To Destination 
+						  For Individuals Seeking Entertainment Options.
+					  </p>
+					  <a href="https://bollyflix.bet/"> go to Bollyflix </a>
+			  </article>
+			  
+			  <article id="Hdhub4u" title="Hdhub4u">   <!-------------Hdhub4u--------------->
+			          <h2> 2) Hdhub4u </h2>
+					  <figure>
+					       <img src="MOVIE/IMG2.webp" alt="Hdhub4u" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      HDHub4u Is An Online Platform That Caters To Movie And TV Show Enthusiasts Seeking A Diverse Range Of 
+						  High-Definition Content. Offering A User-Friendly Interface, The Website Strives To Provide A Seamless 
+						  Experience For Users Looking To Explore And Download Movies And TV Series.
+					  </p>
+					  <a href="https://hdhub4u.mov/"> go to Hdhub4u </a>
+			  </article>
+			  
+			  <article id="Allmovieshub" title="Allmovieshub">   <!-------------Allmovieshub--------------->
+			          <h2> 3) Allmovieshub </h2>
+					  <figure>
+					       <img src="MOVIE/IMG3.webp" alt="Allmovieshub" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      "Allmovieshub" Is A Legitimate And Legal Website, It Could Potentially Be A Platform Dedicated 
+						  To Providing A Hub For Various Movies, Possibly Offering A Wide Range Of Genres And Titles For 
+						  Users To Explore And Enjoy. Such Websites Often Aim To Create A User-Friendly Interface, Making 
+						  It Easy For Visitors To Search, Stream, Or Download Movies.
+					  </p>
+					  <a href="https://allmovieshub.tips/"> go to Allmovieshub </a>
+			  </article>
+			  
+			  <article id="Themoviesflix">   <!-------------Themoviesflix--------------->
+			          <h2> 4) Themoviesflix </h2>
+					  <figure>
+					       <img src="MOVIE/IMG4.webp" alt="Themoviesflix" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      Themoviesflix Is A Well-Known Online Platform Recognized For Offering A Wide Array Of Movies, TV Shows, 
+						  And Web Series For Downloading Or Streaming. It's Popular For Its Extensive Collection Spanning Various 
+						  Genres And Languages, Catering To Diverse Audience Preferences. Themoviesflix Has Gained Traction For 
+						  Its User-Friendly Interface And Accessibility, Making It A Go-To Destination For Individuals Seeking 
+						  Entertainment Options.
+					  </p>
+					  <a href="https://themoviezflix.org.mx"> go to Themoviesflix </a>
+			  </article>
+			  
+			  <article id="Moviesmod" title="Moviesmod">   <!-------------Moviesmod--------------->
+			          <h2> 5) Moviesmod </h2>
+					  <figure>
+					       <img src="MOVIE/IMG5.webp" alt="Moviesmod" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      moviesmod is a notable online platform known for its wide array of movies, TV series, 
+                          and web content available for streaming or downloading. It stands out for its diverse 
+                          collection across different genres and languages, catering to a broad audience base.
+                          With a user-friendly interface, moviesmod has gained popularity among entertainment 
+                          enthusiasts seeking quality content, making it a favored destination for accessing a 
+                          variety of entertainment options.
+					  </p>
+					  <a href="https://moviesmod.dev"> go to Moviesmod </a>
+			  </article>
+			  
+			  <article id="Bolly4u" title="Bolly4u">   <!-------------Bolly4u--------------->
+			          <h2> 6) Bolly4u </h2>
+					  <figure>
+					       <img src="MOVIE/IMG6.webp" alt="Bolly4u" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      Bolly4u is an online platform renowned for its extensive collection of Bollywood movies, 
+                          Hollywood films, TV shows, and web series available for download. It's recognized for 
+                          offering a diverse range of content across various genres and languages. With its
+                          user-friendly interface, Bolly4u attracts users seeking access to a broad selection 
+                          of entertainment options, making it a notable choice in the online entertainment landscape.
+					  </p>
+					  <a href="https://bolly4u.today"> go to Bolly4u </a>
+			  </article>
+			  
+			  <article id="Vegamovies" title="Vegamovies">   <!-------------Vegamovies--------------->
+			          <h2> 7) Vegamovies </h2>
+					  <figure>
+					       <img src="MOVIE/IMG7.webp" alt="Vegamovies" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      Vegamovies is a well-known online platform recognized for offering a wide array of
+                          movies, TV shows, and web series for downloading or streaming. It's popular for its 
+                          extensive collection spanning various genres and languages, catering to diverse
+                          audience preferences. Vegamovies has gained traction for its user-friendly 
+                          interface and accessibility, making it a go-to destination for individuals 
+                          seeking entertainment options.
+					  </p>
+					  <a href="https://vegamovies.ngo"> go to Vegamovies </a>
+			  </article>
+			  
+			  <article id="Movies4u">   <!-------------Movies4u--------------->
+			          <h2> 8) Movies4u </h2>
+					  <figure>
+					       <img src="MOVIE/IMG8.webp" alt="Movies4u" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      movies4u is an online platform that caters to movie and TV show enthusiasts seeking a diverse range of 
+			              high-definition content. Offering a user-friendly interface, the website strives to provide a seamless 
+			              experience for users looking to explore and download movies and TV series.
+					  </p>
+					  <a href="https://movies4u.date"> go to Movies4u </a>
+			  </article>
+			  
+			  <article id="9xflix" title="9xflix">   <!-------------9xflix--------------->
+			          <h2> 9) 9xflix </h2>
+					  <figure>
+					       <img src="MOVIE/IMG9.webp" alt="9xflix" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					      9xflix is an online platform celebrated for its comprehensive library of movies, 
+                          TV series, and web content available for streaming and downloading. This platform
+                          caters to a wide range of genres and languages, appealing to diverse entertainment
+                          preferences. Known for its user-friendly interface, 9xflix has garnered attention 
+                          among audiences looking for a varied selection of quality entertainment options.
+					  </p>
+					  <a href="https://9xflix.trade"> go to 9xflix </a>
+			  </article>
+			  
+			  <article id="Dotmovies" title="Dotmovies">   <!-------------Dotmovies--------------->
+			          <h2> 10) Dotmovies </h2>
+					  <figure>
+					       <img src="MOVIE/IMG10.webp" alt="Dotmovies" loading="lazy" width="100%" height="auto">
+					  </figure>
+					  <p>
+					     dotmovies is a well-known online platform recognized for offering a wide array of
+                         movies, TV shows, and web series for downloading or streaming. It's popular for its 
+                         extensive collection spanning various genres and languages, catering to diverse
+                         audience preferences. dotmovies has gained traction for its user-friendly 
+                         interface and accessibility, making it a go-to destination for individuals 
+                         seeking entertainment options.
+					  </p>
+					  <a href="https://dotmovies.dad"> go to Dotmovies </a>
+			  </article>
+			
+	  </Section>	 
 
-       <figure id="website2"> <!----Biography 2----->
-           <h2> 2) hdhub4u </h2>
-           <img src="MOVIE/IMG2.webp" alt="hdhub4u" loading="auto">
-           <p> 
-              HDHub4u is an online platform that caters to movie and TV show enthusiasts seeking a diverse range of 
-			  high-definition content. Offering a user-friendly interface, the website strives to provide a seamless 
-			  experience for users looking to explore and download movies and TV series.
-          </p>
-          <button class="page"> <a href="https://hdhub4u.mov/"> Go To Official page </a></button> 
-       </figure>
 
-       <figure id="website3">  <!----Biography 3----->
-           <h2> 3) allmovieshub </h2>
-           <img src="MOVIE/IMG3.webp" alt="allmovieshub" loading="auto">
-           <p> 
-              "allmovieshub" is a legitimate and legal website, it could potentially be a platform dedicated to
-			  providing a hub for various movies, possibly offering a wide range of genres and titles for users
-			  to explore and enjoy. Such websites often aim to create a user-friendly interface, making it easy
-			  for visitors to search, stream, or download movies.
-          </p>
-          <button class="page"> <a href="https://allmovieshub.tips/"> Go To Official page </a></button> 
-      </figure>
-
-       <figure id="website4"> <!----Biography 4----->
-           <h2> 4) themoviesflix </h2>
-           <img src="MOVIE/IMG4.webp" alt="themoviesflix" loading="auto"> 
-           <p> 
-              themoviesflix is a well-known online platform recognized for offering a wide array of
-              movies, TV shows, and web series for downloading or streaming. It's popular for its 
-              extensive collection spanning various genres and languages, catering to diverse
-              audience preferences. themoviesflix has gained traction for its user-friendly 
-              interface and accessibility, making it a go-to destination for individuals 
-              seeking entertainment options.
-          </p>
-          <button class="page"> <a href="https://themoviezflix.org.mx"> Go To Official page </a></button> 
-       </figure>
-
-        <figure id="website5"> <!----Biography 5----->
-           <h2> 5) moviesmod </h2>
-           <img src="MOVIE/IMG5.webp" alt="moviesmod" loading="auto"> 
-           <p> 
-              moviesmod is a notable online platform known for its wide array of movies, TV series, 
-              and web content available for streaming or downloading. It stands out for its diverse 
-              collection across different genres and languages, catering to a broad audience base.
-              With a user-friendly interface, moviesmod has gained popularity among entertainment 
-              enthusiasts seeking quality content, making it a favored destination for accessing a 
-              variety of entertainment options.
-          </p>
-          <button class="page"> <a href="https://moviesmod.dev"> Go To Official page </a></button> 
-      </figure>
-
-       <figure id="website6"> <!----Biography 6----->
-           <h2> 6) Bolly4u </h2>
-           <img src="MOVIE/IMG6.webp" alt="bolly4u" loading="auto">
-           <p> 
-              Bolly4u is an online platform renowned for its extensive collection of Bollywood movies, 
-              Hollywood films, TV shows, and web series available for download. It's recognized for 
-              offering a diverse range of content across various genres and languages. With its
-              user-friendly interface, Bolly4u attracts users seeking access to a broad selection 
-              of entertainment options, making it a notable choice in the online entertainment landscape.
-          </p>
-          <button class="page"> <a href="https://bolly4u.today"> Go To Official page </a></button> 
-       </figure>
-
-      <figure id="website7"> <!----Biography 7----->
-           <h2> 7) Vegamovies </h2>
-            <img src="MOVIE/IMG7.webp" alt="Vegamoviesmovies" loading="auto"> 
-           <p> 
-              Vegamovies is a well-known online platform recognized for offering a wide array of
-              movies, TV shows, and web series for downloading or streaming. It's popular for its 
-              extensive collection spanning various genres and languages, catering to diverse
-              audience preferences. Vegamovies has gained traction for its user-friendly 
-              interface and accessibility, making it a go-to destination for individuals 
-              seeking entertainment options.
-          </p>
-          <button class="page"> <a href="https://vegamovies.ngo"> Go To Official page </a></button> 
-       </figure>
-
-       <figure id="website8"> <!----Biography 8----->
-           <h2> 8) movies4u </h2>
-           <img src="MOVIE/IMG8.webp" alt="movies4u" loading="auto"> 
-           <p> 
-              movies4u is an online platform that caters to movie and TV show enthusiasts seeking a diverse range of 
-			  high-definition content. Offering a user-friendly interface, the website strives to provide a seamless 
-			  experience for users looking to explore and download movies and TV series.
-          </p>
-          <button class="page"> <a href="https://movies4u.date"> Go To Official page </a></button> 
-      </figure>
-
-       <figure id="website9"> <!----Biography 9----->
-           <h2> 9) 9xflix </h2>
-           <img src="MOVIE/IMG9.webp" alt="9xflix" loading="auto"> 
-           <p> 
-              9xflix is an online platform celebrated for its comprehensive library of movies, 
-              TV series, and web content available for streaming and downloading. This platform
-              caters to a wide range of genres and languages, appealing to diverse entertainment
-              preferences. Known for its user-friendly interface, 9xflix has garnered attention 
-              among audiences looking for a varied selection of quality entertainment options.
-          </p>
-          <button class="page"> <a href="https://9xflix.trade"> Go To Official page </a></button> 
-       </figure>
-
-      <figure id="website10"> <!----Biography 10----->
-           <h2> 10) dotmovies </h2>
-           <img src="MOVIE/IMG10.webp" alt="dotmovie" loading="auto"> 
-           <p> 
-              dotmovies is a well-known online platform recognized for offering a wide array of
-              movies, TV shows, and web series for downloading or streaming. It's popular for its 
-              extensive collection spanning various genres and languages, catering to diverse
-              audience preferences. dotmovies has gained traction for its user-friendly 
-              interface and accessibility, making it a go-to destination for individuals 
-              seeking entertainment options.
-          </p>
-          <button class="page"> <a href="https://dotmovies.dad"> Go To Official page </a></button> 
-       </figure>
-    <!-- Add more div elements as needed -->
-  </div>
-
-</main>
-             
-			 
-			 
-   <!----Go To Top Button------>
-       <button id="topButton" class="fa-solid fa-arrow-up" title="go to top "> </button>
-      
-
-   <!-----How to Download Tutorial----->
-       <aside>
-            <div id="how"> <h1 style="color:#211b63;"> #How to Download Movies </h1> </div>
-            <div id="howvdo">  
-                <video controls> 
-		      <source src="video.mp4" type="video/mp4">
+	  
+			   <!--------------------------------------------
+			   -------------how to download section-----------
+			   ----------------------------------------------->
+	<Section>	
+           	<h2> #How to Download Movies </h2>
+            <article id="howvdo">  
+                  <video controls> 
+		              <source src="video.mp4" type="video/mp4">
                       <track src="#" kind="captions" srclang="en" label="English">
                       Your browser does not support the video tag.
-		</video>  
-                 <video controls> 
-		      <source src="video.mp4" type="video/mp4">
+		         </video>  
+                  <video controls> 
+		              <source src="video.mp4" type="video/mp4">
                       <track src="#" kind="captions" srclang="en" label="English">
                       Your browser does not support the video tag.
-		</video> 
-           </div>
-      </aside>
-
-
-      
-        <section style="padding:15px;">
+		       </video> 
+            </article>
+	</Section>
+			    <!---------------------------------------------------------
+				-------------------some tips section--------------------
+				----------------------------------------------------------->
+		<section>
 		       <h2> Tips for Safe and Legal Movie Downloads </h2>
 			   <p>  While free movie download websites offer a wealth of entertainment options, 
 			       it's essential to prioritize safety and legality. Here are some tips to ensure
@@ -978,10 +898,12 @@
 			      <li> Be cautious of pop-up ads and suspicious links that may lead to malware or pirated content. </li>
 			      <li> Check the copyright status of the movies you download to avoid infringing on intellectual property rights. </li>
 			      <li> Consider supporting creators by purchasing or renting movies through authorized channels whenever possible. </li>
-			      <li>  </li>
-			  </ul>
+			 </ul>
 		</section>
-		
+				
+				<!---------------------------------------------------------
+				-------------------CONCLUSION section--------------------
+				----------------------------------------------------------->
 		<section style="padding:15px;">
 		      <h2> Conclusion </h2>
 			  <p> With the abundance of free movie download websites available today, there's no shortage of entertainment 
@@ -989,91 +911,104 @@
 				  a vast library of movies at your fingertips, all without spending a dime. So why wait? Start exploring 
 				  the world of free movie downloads today and unlock endless cinematic possibilities!
 			 </p>
-		</section>
-
-   <!-----Recomended Article Section-------->
-	    <section class="reqcontainer">
-    <h1>Recommended Pages</h1>
+		</section>   			  
+			  
+		</main>
+        
+		          <!---------------------------------------------------------
+				    -------------------recomended section--------------------
+				----------------------------------------------------------->
+ <section class="container">
+    <h2>Recommended Pages</h2>
     <div class="recommended-pages">
       <!-- Page 1 -->
       <a class="page" href="books-poem-sonnet-poetry.html">
-        <img src="INDEX/poetry.webp" alt="Beauty of poetry">
+        <img src="INDEX/poetry.webp" alt="Beauty of poetry" loading="lazy" width="300" height="auto">
         <div class="page-content">
-          <h2>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </h2>
+          <p>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </p>
         </div>
       </a>
       <!-- Page 2 -->
       <a class="page" href="index.html">
-        <img src="INDEX/Lod7.webp" alt="lord Krishna quotes">
+        <img src="INDEX/Lod7.webp" alt="lord Krishna quotes" loading="lazy" width="300" height="auto">
         <div class="page-content">
-          <h2>  50 Best Shri Krishna's Quotes From Srimad Bhagavad Gita  </h2>
+          <p>  50 Best Shri Krishna's Quotes From Srimad Bhagavad Gita  </p>
         </div>
       </a>
       <!-- Page 3 -->
       <a class="page" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html">
-        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat">
+        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat" loading="lazy" width="300" height="auto">
         <div class="page-content">
-          <h2> Explore the Epics: Ramayana and Mahabharata Q&A </h2>
+          <p> Explore the Epics: Ramayana and Mahabharata Q&A </p>
         </div>
       </a>
       <!-- Page 4 -->
-      <a class="page" href="best-online-mobile-games.html">
-        <img src="INDEX/banner.webp" alt="video games">
+      <a class="page" href="best-online-mobile-games.html" >
+        <img src="INDEX/banner.webp" alt="video games" loading="lazy" width="300" height="auto">
         <div class="page-content">
-          <h2>  Best mobile games in India: discover the best Games, tips, and reviews  </h2>
+          <p>  Best mobile games in India: discover the best Games, tips, and reviews  </p>
         </div>
       </a>
       <!-- Page 5 -->
       <a class="page" href="best-instant-free-paytm-cash-earning-apps.html">
-        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps">
+        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps" loading="lazy" width="300" height="auto">
         <div class="page-content">
-          <h2>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </h2>
+          <p>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </p>
         </div>
       </a>
       <!-- Page 6 -->
       <a class="page" href="best-free-movie-download-websites.html">
-        <img src="INDEX/movie.webp" alt="movie-download-websites">
+        <img src="INDEX/movie.webp" alt="movie-download-websites" loading="lazy" width="300" height="auto">
         <div class="page-content">
-          <h2> Download movies: best movie download websites in 2024  </h2>
+          <p> Download movies: best movie download websites in 2024  </p>
         </div>
       </a>
     </div>
   </section>
-   
-
-     <!----Comment Section------->
-	       <h1 style="color:#5E2BFF;text-align:Center;"> leave a comment </h1>
-          <div id="gettouch" class="comment-section">
-             <form action="#" method="post" id="myForm"> <!--id comment-form--->                
-                 
-                 <label for ="Name"> Name </label>
-                 <input type="text" id="name" name="name" placeholder="name" spellcheck="true" required>
+		
+		<!---------------------------------------------------
+		--------------------Comment Section------------------
+		----------------------------------------------------->
+	       
+          <Section id="gettouch" class="comment-section">
+		  
+		      <h2 style="color:#5E2BFF;text-align:Center;"> leave a comment </h2>
+		  
+             <form action="#" method="post" id="myForm" autocomplete="on">
+					        
+						 <label for ="name"> Name </label>
+                         <input type="text" id="name" name="name" placeholder="Name" spellcheck="true" autocomplete="given-name" required>
                 
-				 <label for ="email"> Email </label>
-                 <input type="email" id="email" name="email" placeholder="email"spellcheck="true" required>
+				         <label for ="email"> Email </label>
+                         <input type="email" id="email" name="email" placeholder="Email" spellcheck="true" autocomplete="off" required>
                 
-				 <label for ="text"> Message </label>
-				 <textarea id="msg" name="msg" rows="6" cols="40" placeholder="Message" spellcheck="true" required></textarea>
+				         <label for ="msg"> Message </label>
+				         <textarea id="msg" name="msg" rows="7" cols="40" placeholder="Your Comment*" spellcheck="true" required></textarea>
                  
-                <button class="btn" type="submit"> Submit </button>
-            </form>   
-        
+                         <button class="btn" type="submit"> Submit </button>
+				
+			 </form>
+        </Section>
 
-            <div class="didit">
+
+             <!---------------------------------------------------
+		      --------------------Comment Section------------------
+		      ----------------------------------------------------->				
+            <Section class="didit">
                   <h2> Recent Comments  </h2>
                   <div id="comments"> </div> <!----messages-04----->
                   <div id="community"> Comments 0 </div> <!----messages-03----->
             <!---<div id="community"> <b> sneha:- </b> wows  </div> ---messages-02---->
             <!---<div id="community"> <b> ajoy :- </b> best </div>-----messages-01----->
-           </div>
-      </div>
-
-                                 
-     <!-----------------------------------
+           </Section>
+      
+	  
+	  
+		 <!-----------------------------------
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
-     <footer>
-        <p>  &copy copyright-2024  quotehubspot. all rights reserved </p>
+    <footer>
+        <p>  &copy copyright-2024  Quotehubspot. all rights reserved </p>
         <div class="social-media">
             <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
             <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1091,11 +1026,9 @@
             <a href="my-sitemap.html" target="_self">  Sitemap  </a>
         </nav>
     </footer>
-             
- 
-   <script>
-          
-           const sidebar = document.getElementById("sidebar");
+<script>		
+       
+	      const sidebar = document.getElementById("sidebar");
            const overlay = document.getElementById("overlay");
            const toggleButton = document.getElementById("toggleButton");
 
@@ -1137,113 +1070,19 @@
 
      // Scroll the container to center the active item
              scrollContainer.scrollLeft = scrollItemCenter;
-
-
-
-      
-        /* Go To Top Button */
-
-      window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("topButton").style.display = "block";
-  } else {
-    document.getElementById("topButton").style.display = "none";
-  }
-};
-
-// Scroll to the top when the button is clicked
-  document.getElementById("topButton").addEventListener("click", function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;  
-});
-   //link click scrolling 
-  document.getElementById("dnl").addEventListener("click", function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;  
- });
-
- 
-      //whatsapp share button
-			  
-        document.getElementById("whatsappButton").addEventListener("click", function() {
-        // Replace 'your_text' and 'your_url' with the desired text and URL you want to share
-        var text = "Check out this cool website!";
-        var url = "https://sparrow-gif.github.io/Website-001/";
-
-        // Construct the WhatsApp share URL
-        var whatsappUrl = "https://api.whatsapp.com/send?text=" + encodeURIComponent(text + " " + url);
-
-        // Open the WhatsApp share window
-        window.open(whatsappUrl, "_blank");
-    });
-	      
-      //Contact us 
-      document.getElementById('comment-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const commentText = document.getElementById('comment').value;
-  const email = document.getElementById('email').value;
-  if (name && commentText) {
-    addComment(name, commentText, email);
-    document.getElementById('comment-form').reset();
-  } else {
-    alert('Please fill in all fields.');
-  }
+	   
+		 // JavaScript to handle sharing functionality
+document.getElementById('whatsappBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://api.whatsapp.com/send?text=' + url, '_blank');
 });
 
-function addComment(name, commentText) {
-  const commentsSection = document.getElementById('comments');
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment');
-  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-  commentsSection.appendChild(commentDiv);
-}
-   </script>
-   
-       <script>
-      const form = document.getElementById('myForm');
-      form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const responseData = await fetch('https://script.google.com/macros/s/AKfycbw-d3Eb2-hszre2uCKLnNxHX25lyGYDu32ghI6-15rRi7YGOzA8DA9cBOJNFsmWqSo/exec', {
-        method: 'POST',
-          body: formData
-        });
-    // Handle the response here (if needed)
-	  document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents the default form submission behavior
-
-            // Show alert
-            window.alert('Form submitted!');
-
-            // Refresh the form
-            document.getElementById('myForm').reset();			
-        });
-		
-		 //Contact us 
-      document.getElementById('myForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const commentText = document.getElementById('msg').value;
-  const email = document.getElementById('email').value;
-  if (name && commentText) {
-    addComment(name, commentText, email);
-    document.getElementById('myForm').reset();
-	 alert("submitted");
-  } else {
-    alert('Please fill in all fields.');
-  }
+document.getElementById('facebookBtn').addEventListener('click', function() {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
 });
-
-function addComment(name, commentText) {
-  const commentsSection = document.getElementById('comments');
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment');
-  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-  commentsSection.appendChild(commentDiv);
-} 
-  });
 </script>
-   
- </body>
+
+</body>
 </html>
+		 
